@@ -1,0 +1,71 @@
+/* Sunhome Group — base styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #1A1A1A;
+  background-color: #FAF8F3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif,
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.App {
+  text-align: left;
+}
+
+/* Selection */
+::selection {
+  background: #B8956A;
+  color: #FAF8F3;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F2EEE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9C3B5;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8956A;
+}
+
+/* Custom keyframes */
+@keyframes scrollCue {
+  0% { transform: translateY(-100%); }
+  60% { transform: translateY(250%); }
+  100% { transform: translateY(250%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Image base */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove tap highlight */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}

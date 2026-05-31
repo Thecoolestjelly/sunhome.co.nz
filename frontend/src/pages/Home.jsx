@@ -1,0 +1,239 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowUpRight, Award, Clock, Cog, BadgeCheck, Users, Tag, ArrowRight, Quote } from "lucide-react";
+import HeroCarousel from "../components/HeroCarousel";
+import Reveal from "../components/Reveal";
+import { SERVICES, FEATURES, TESTIMONIALS, BRANDS, COLOR_RANGES } from "../mock";
+
+const FEATURE_ICONS = [Award, Clock, Cog, BadgeCheck, Users, Tag];
+
+export default function Home() {
+  return (
+    <div className="bg-[#FAF8F3]">
+      <HeroCarousel />
+
+      {/* Intro / Stats */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-20">
+          <Reveal className="lg:col-span-5">
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Who We Are</div>
+            <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-6">
+              Auckland's most trusted stone fabricator since 2008.
+            </h2>
+          </Reveal>
+          <Reveal delay={150} className="lg:col-span-7">
+            <p className="text-[#4A4A4A] text-lg leading-relaxed mb-10">
+              Sunhome Group Ltd has proudly supplied premium stone benchtops to residential and commercial clients across Auckland for over 15 years. Combining the latest 5-axis CNC technology with master craftsmen, we deliver exceptional product and service — at honest, competitive pricing.
+            </p>
+            <div className="grid grid-cols-3 gap-6 border-t border-[#E5E0D5] pt-10">
+              {[
+                { k: "15+", v: "Years in trade" },
+                { k: "600+", v: "Homes per year" },
+                { k: "3", v: "Day installs" },
+              ].map((s) => (
+                <div key={s.v}>
+                  <div className="font-serif text-4xl lg:text-5xl text-[#1A1A1A] mb-2">{s.k}</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B]">{s.v}</div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-24 lg:py-32 bg-[#F2EEE6]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <Reveal className="mb-16 max-w-2xl">
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">What We Do</div>
+            <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1]">
+              Stone for every space.
+            </h2>
+          </Reveal>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+            {SERVICES.map((s, idx) => (
+              <Reveal key={s.num} delay={idx * 100}>
+                <div className="group relative overflow-hidden bg-white rounded-sm h-[460px]">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                    style={{ backgroundImage: `url(${s.image})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  <div className="absolute top-6 left-6 text-white/70 text-xs tracking-[0.3em] uppercase">{s.num}</div>
+                  <div className="absolute bottom-0 left-0 right-0 p-8">
+                    <h3 className="font-serif text-white text-2xl lg:text-3xl mb-3">{s.title}</h3>
+                    <p className="text-white/80 text-sm leading-relaxed mb-5 max-w-md">{s.desc}</p>
+                    <Link
+                      to="/gallery"
+                      className="inline-flex items-center gap-2 text-[#B8956A] text-xs uppercase tracking-[0.25em] group/btn"
+                    >
+                      Explore work
+                      <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+                    </Link>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            <Reveal className="lg:col-span-4 lg:sticky lg:top-32">
+              <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Why Sunhome</div>
+              <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-6">
+                The detail is in the difference.
+              </h2>
+              <p className="text-[#4A4A4A] leading-relaxed">
+                Fifteen years sharpening every joint, every edge, every conversation. The result — stone you'll be proud to live with.
+              </p>
+            </Reveal>
+
+            <div className="lg:col-span-8 grid sm:grid-cols-2 gap-x-10 gap-y-12">
+              {FEATURES.map((f, idx) => {
+                const Icon = FEATURE_ICONS[idx];
+                return (
+                  <Reveal key={f.title} delay={idx * 80}>
+                    <div>
+                      <div className="w-12 h-12 border border-[#E5E0D5] flex items-center justify-center mb-6">
+                        <Icon className="w-5 h-5 text-[#B8956A]" />
+                      </div>
+                      <h3 className="font-serif text-[#1A1A1A] text-xl mb-3">{f.title}</h3>
+                      <p className="text-[#6B6B6B] text-sm leading-relaxed">{f.desc}</p>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Colours */}
+      <section className="py-24 lg:py-32 bg-[#1A1A1A] text-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div className="max-w-2xl">
+              <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Featured Range</div>
+              <h2 className="font-serif text-white text-4xl lg:text-5xl leading-[1.1]">
+                Statement marbles, hand-picked.
+              </h2>
+            </div>
+            <Link
+              to="/colours"
+              className="inline-flex items-center gap-2 text-[#B8956A] text-xs uppercase tracking-[0.25em] group"
+            >
+              View all colours
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </Reveal>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+            {COLOR_RANGES[2].colors.slice(0, 8).map((c, idx) => (
+              <Reveal key={c.name} delay={idx * 60}>
+                <div className="group cursor-pointer">
+                  <div className="overflow-hidden aspect-[3/4] mb-4">
+                    <img
+                      src={c.image}
+                      alt={c.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="font-serif text-base text-white">{c.name}</span>
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#B8956A] opacity-0 group-hover:opacity-100 transition-opacity">View</span>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <Reveal className="text-center max-w-2xl mx-auto mb-16">
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Client Stories</div>
+            <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1]">
+              Trusted by hundreds of New Zealanders.
+            </h2>
+          </Reveal>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+            {TESTIMONIALS.map((t, idx) => (
+              <Reveal key={t.name} delay={idx * 100}>
+                <div className="bg-white border border-[#E5E0D5] p-8 lg:p-10 h-full hover:border-[#B8956A] transition-colors duration-500">
+                  <Quote className="w-7 h-7 text-[#B8956A] mb-6" />
+                  <p className="text-[#1A1A1A] text-base lg:text-lg leading-relaxed mb-8 font-serif">
+                    “{t.quote}”
+                  </p>
+                  <div className="border-t border-[#E5E0D5] pt-5">
+                    <div className="text-[#1A1A1A] text-sm mb-1">{t.name}</div>
+                    <div className="text-[#6B6B6B] text-xs uppercase tracking-[0.2em]">{t.source}</div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Brands */}
+      <section className="py-20 bg-[#F2EEE6]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <Reveal className="text-center mb-12">
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-4">Partner Brands</div>
+            <p className="font-serif text-[#1A1A1A] text-2xl lg:text-3xl">
+              We supply the most trusted engineered quartz brands on the NZ market.
+            </p>
+          </Reveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 items-center">
+            {BRANDS.map((b) => (
+              <div key={b.name} className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                <img src={b.logo} alt={b.name} className="max-h-12 w-auto object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="relative py-28 lg:py-36 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(https://www.sunhome.co.nz/wp-content/uploads/2023/01/Calacatta-white-1-1-1024x684.jpg)" }}
+        />
+        <div className="absolute inset-0 bg-[#1A1A1A]/80" />
+        <Reveal className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+          <div className="text-[#B8956A] text-xs uppercase tracking-[0.4em] mb-6">Start Your Project</div>
+          <h2 className="font-serif text-white text-4xl lg:text-6xl leading-[1.05] mb-8">
+            Ready to transform your kitchen?
+          </h2>
+          <p className="text-white/85 text-lg mb-10 leading-relaxed">
+            Visit our East Tamaki showroom or get a free, no-obligation quote today.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-[#FAF8F3] text-[#1A1A1A] px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] hover:bg-[#B8956A] hover:text-white transition-colors duration-300"
+            >
+              Request a Quote
+            </Link>
+            <Link
+              to="/gallery"
+              className="inline-flex items-center gap-2 border border-white/40 text-white px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
+            >
+              View Our Work
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+    </div>
+  );
+}

@@ -43,7 +43,7 @@ export default function Colours() {
       </section>
 
       {/* Tabs */}
-      <div className="sticky top-[72px] z-30 bg-[#FAF8F3]/90 backdrop-blur-md border-y border-[#E5E0D5]">
+      <div className="sticky top-[88px] z-30 bg-[#FAF8F3]/95 backdrop-blur-md border-y border-[#E5E0D5]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap gap-3 lg:gap-8 py-5">
           {tabs.map((t) => (
             <button

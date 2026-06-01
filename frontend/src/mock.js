@@ -11,10 +11,10 @@ export const SITE = {
   address: "1C Birmingham Road, Ōtara, Auckland 2013, New Zealand",
   shortAddress: "1C Birmingham Road, Ōtara, Auckland",
   hours: {
-    showroom: "Mon – Fri  9:30am – 12:00pm",
-    pickup: "Mon – Fri  8:30am – 1:00pm",
+    showroom: "Mon – Fri  10:00am – 12:00pm",
+    pickup: "Mon – Fri  10:00am – 12:00pm",
   },
-  logo: "/assets/logo/sunhome-logo.jpg",
+  logo: "/assets/logo/sunhome-logo.png",
   rating: {
     google: 4.6,
     reviews: 30,
@@ -199,17 +199,16 @@ export const COLOR_RANGES = [
     name: "High Range",
     blurb: "Statement marbles — bold veining and luxurious finishes.",
     colors: [
-      { name: "Calacatta White", image: "/assets/colors/calacatta-white.jpg" },
-      { name: "Calacatta Blanco", image: "/assets/colors/calacatta-blanco.jpg" },
-      { name: "Calacatta Splendour White", image: "/assets/colors/calacatta-splendour-white.jpg" },
-      { name: "Calacatta Gold", image: "/assets/colors/calacatta-gold.jpg" },
-      { name: "Calacatta Golden", image: "/assets/colors/calacatta-golden.jpg" },
-      { name: "Cala Gold Line", image: "/assets/colors/cala-gold-line.jpg" },
-      { name: "Brittanicca", image: "/assets/colors/brittanicca.jpg" },
-      { name: "Karrera White", image: "/assets/colors/karrera-white.jpg" },
-      { name: "Phoenix", image: "/assets/colors/phoenix.jpg" },
+      { name: "Calacatta White", image: "/assets/colors/calacatta-white-square.jpg" },
+      { name: "Calacatta Blanco", image: "/assets/colors/calacatta-blanco-square.jpg" },
+      { name: "Calacatta Splendour White", image: "/assets/colors/calacatta-splendour-white-square.jpg" },
+      { name: "Calacatta Golden", image: "/assets/colors/calacatta-golden-square.jpg" },
+      { name: "Cala Gold Line", image: "/assets/colors/cala-gold-line-square.jpg" },
+      { name: "Brittanicca", image: "/assets/colors/brittanicca-square.jpg" },
+      { name: "Karrera White", image: "/assets/colors/karrera-white-square.jpg" },
+      { name: "Phoenix", image: "/assets/colors/phoenix-square.jpg" },
       { name: "French Vanilla", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/French-Vanilla-rotated.jpg" },
-      { name: "Pure White", image: "/assets/colors/pure-white.jpg" },
+      { name: "Pure White", image: "/assets/colors/pure-white-square.jpg" },
     ],
   },
   {
@@ -229,9 +228,7 @@ export const COLOR_RANGES = [
     blurb: "End-of-line and stocked slabs — premium stone at exceptional prices.",
     colors: [
       { name: "Platinum Black", image: "/assets/colors/platinum-black.jpg" },
-      { name: "Grey Vein", image: "/assets/colors/grey-vein.jpg" },
       { name: "Dark Stone", image: "/assets/colors/dark-stone.jpg" },
-      { name: "Diamond Black", image: "/assets/colors/diamond-black-2.jpg" },
     ],
   },
 ];
@@ -241,7 +238,7 @@ export const FULL_SLABS = [
   { name: "Calacatta White", note: "20mm / 30mm Available", image: "/assets/colors/calacatta-white.jpg" },
   { name: "Calacatta Blanco", note: "20mm / 30mm Available", image: "/assets/colors/calacatta-blanco.jpg" },
   { name: "Calacatta Splendour White", note: "20mm / 30mm Available", image: "/assets/colors/calacatta-splendour-white.jpg" },
-  { name: "Calacatta Gold", note: "30mm On Sale", image: "/assets/colors/calacatta-gold.jpg" },
+  { name: "Calacatta Gold", note: "30mm On Sale", image: "/assets/colors/calacatta-golden.jpg" },
   { name: "Brittanicca", note: "30mm Available", image: "/assets/colors/brittanicca.jpg" },
   { name: "Karrera White", note: "30mm Available", image: "/assets/colors/karrera-white.jpg" },
   { name: "Pure White", note: "20mm / 30mm Available", image: "/assets/colors/pure-white.jpg" },
@@ -249,48 +246,48 @@ export const FULL_SLABS = [
 ];
 
 export const GALLERY = [
+  // Kitchens / Installs
   { src: "/assets/colors/cal-kitchen.jpg", caption: "Calacatta White Kitchen", category: "Kitchens" },
   { src: "/assets/colors/kitchen-1.jpg", caption: "Modern Kitchen Install", category: "Kitchens" },
   { src: "/assets/colors/kitchen-2.jpg", caption: "Premium Bench Install", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Calacatta-white-2-1-1024x768.jpeg", caption: "Calacatta White Kitchen", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Calacatta-White-1-2-1024x768.jpeg", caption: "Calacatta White Island", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/calacatta-White-1024x684.jpg", caption: "Calacatta White Benchtop", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/14-Calacatta-White-Bar-Back-2-1024x768.jpg", caption: "Calacatta White Bar Back", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Brittanicca-3-1024x768.jpg", caption: "Brittanicca Island", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/IMG-122407-27-23-46-14-1024x768.jpg", caption: "Karrera White Kitchen", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/19-White-Ice-1.jpg", caption: "White Ice Kitchen", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/16-Pure-White-scaled.jpg", caption: "Pure White Kitchen", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/18-White-Diamond-3-scaled.jpg", caption: "Diamond White Kitchen", category: "Kitchens" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/11-andy-home-1-scaled.jpg", caption: "Black Pearl Kitchen", category: "Kitchens" },
+
+  // Joints / Edges
   { src: "/assets/colors/miter-joint.jpg", caption: "Mitered Waterfall End", category: "Joints" },
-  { src: "/assets/colors/backside.jpg", caption: "Bench Backside Detail", category: "Detail" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Brittanicca-2-1-768x1024.jpg", caption: "Brittanicca Waterfall End", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Brittanicca-3-1024x768.jpg", caption: "Brittanicca Island", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Calacatta-white-2-1-1024x768.jpeg", caption: "Calacatta White Kitchen", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Calacatta-White-1-2-1024x768.jpeg", caption: "Calacatta White Island", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/calacatta-White-1024x684.jpg", caption: "Calacatta White Benchtop", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/12-Calacatta-White-30mm-1.jpg", caption: "Calacatta White 30mm", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/14-Calacatta-White-Bar-Back-2-1024x768.jpg", caption: "Calacatta White Bar Back", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/13-Pure-White-and-Calacatta-White-2-755x1024.jpg", caption: "Pure White & Calacatta", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/IMG_2859-1.jpg", caption: "Calacatta White Detail", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/1-Calacatta-White-60mm-Miter-Joint-1-1024x768.jpg", caption: "Calacatta White 60mm Miter", category: "Joints" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/1-Calacatta-White-60mm-Miter-Joint-1-1024x768.jpg", caption: "Calacatta 60mm Miter", category: "Joints" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/YJ-40mm-Miter-joint-water-fall-ends-1024x768.jpg", caption: "YJ 40mm Miter Joint", category: "Joints" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Calacatta-White-30mm-Miter-Joint-1.jpg", caption: "Calacatta 30mm Miter", category: "Joints" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/IMG-122407-27-23-46-14-1024x768.jpg", caption: "Karrera White", category: "Calacatta" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/IMG-0968-1024x768.jpg", caption: "Caesarstone Raw Concrete", category: "Caesarstone" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Piatra-Grey-1-2-768x1024.jpeg", caption: "Caesarstone Piatra Grey", category: "Caesarstone" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Calacatta-Nuvo-2.jpeg", caption: "Caesarstone Calacatta Nuvo", category: "Caesarstone" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Caesarstone-60mm-Miter-Joint-Water-fall-end-768x1024.jpg", caption: "Caesarstone 60mm Miter", category: "Caesarstone" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/20-White-Ice-20mm-1.jpg", caption: "White Ice 20mm", category: "White" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/19-White-Ice-1.jpg", caption: "White Ice Kitchen", category: "White" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/16-Pure-White-scaled.jpg", caption: "Pure White", category: "White" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/diamond-white-1.jpg", caption: "Diamond White", category: "White" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/18-White-Diamond-3-scaled.jpg", caption: "Diamond White Kitchen", category: "White" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/33-White-Diamond-UM-sink-1-scaled.jpg", caption: "Diamond White Undermount", category: "Sinks" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/34-White-Nougat-Butt-joint-water-fall-end-1-scaled.jpg", caption: "White Nougat Waterfall End", category: "White" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Caesarstone-60mm-Miter-Joint-Water-fall-end-768x1024.jpg", caption: "Caesarstone 60mm Miter", category: "Joints" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/8-Black-Pearl-Miter-Joint-1-scaled.jpg", caption: "Black Pearl Miter", category: "Joints" },
+
+  // Sinks
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/27-Black-Pearl-Non-Rectangle-UM-sink-cut-out-scaled.jpg", caption: "Black Pearl Under-Mount Sink", category: "Sinks" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/28-Black-Pearl-Top-Mount-sink-1.jpg", caption: "Black Pearl Top-Mount Sink", category: "Sinks" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/33-White-Diamond-UM-sink-1-scaled.jpg", caption: "Diamond White Under-Mount Sink", category: "Sinks" },
+
+  // Vanity / details
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/15-Pure-White-Customised-vanity-top-1.jpg", caption: "Pure White Vanity", category: "Vanity" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/25-Diamond-Black-1.jpg", caption: "Diamond Black", category: "Dark" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Star-galaxy-scaled.jpg", caption: "Star Galaxy Granite", category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/8-Black-Pearl-Miter-Joint-1-scaled.jpg", caption: "Black Pearl Miter", category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/11-andy-home-1-scaled.jpg", caption: "Black Pearl Kitchen", category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/28-Black-Pearl-Top-Mount-sink-1.jpg", caption: "Black Pearl Top Mount Sink", category: "Sinks" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/13-Pure-White-and-Calacatta-White-2-755x1024.jpg", caption: "Pure White & Calacatta", category: "Detail" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/12-Calacatta-White-30mm-1.jpg", caption: "Calacatta White 30mm", category: "Detail" },
+
+  // Caesarstone
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/IMG-0968-1024x768.jpg", caption: "Caesarstone Raw Concrete", category: "Caesarstone" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Calacatta-Nuvo-2.jpeg", caption: "Caesarstone Calacatta Nuvo", category: "Caesarstone" },
+
+  // Granite
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Star-galaxy-scaled.jpg", caption: "Star Galaxy", category: "Granite" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Blue-Pearl-scaled.jpg", caption: "Blue Pearl", category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/27-Black-Pearl-Non-Rectangle-UM-sink-cut-out-scaled.jpg", caption: "Black Pearl Custom UM Sink", category: "Sinks" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/tan-brown-scaled.jpg", caption: "Tan Brown", category: "Granite" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/front1-1-scaled.jpg", caption: "Steel Grey", category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/tan-brown-scaled.jpg", caption: "Tan Brown Granite", category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/5-Axis-CNC-Machine-scaled.jpg", caption: "5-Axis CNC Workshop", category: "Factory" },
-  { src: "/assets/colors/showroom-1.jpg", caption: "Factory Showroom", category: "Factory" },
-  { src: "/assets/colors/showroom-2.jpg", caption: "Slab Storage", category: "Factory" },
 ];
 
 // SINKS — Updated 2026 pricing (S400R80 and D350-350R80 removed)
@@ -409,7 +406,7 @@ export const SINK_TYPES = [
   {
     title: "Under-Mount Sink",
     desc: "Mounted beneath the benchtop for a clean, seamless surface. Easy wipe-down with no rim to trap crumbs.",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/33-White-Diamond-UM-sink-1-scaled.jpg",
+    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/27-Black-Pearl-Non-Rectangle-UM-sink-cut-out-scaled.jpg",
     pros: ["Seamless edge profile", "Easier cleaning", "Modern minimalist look"],
   },
   {
@@ -417,12 +414,6 @@ export const SINK_TYPES = [
     desc: "Sits on top of the benchtop with a visible rim. Practical, budget-friendly and works with any thickness.",
     image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/28-Black-Pearl-Top-Mount-sink-1.jpg",
     pros: ["Simple installation", "Budget friendly", "Suits all stone thicknesses"],
-  },
-  {
-    title: "Custom Cut-Outs",
-    desc: "Non-rectangular and bespoke sink cut-outs precisely machined on our 5-axis CNC for any sink shape.",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/27-Black-Pearl-Non-Rectangle-UM-sink-cut-out-scaled.jpg",
-    pros: ["CNC-machined precision", "Any sink shape", "Perfect-fit tolerance"],
   },
 ];
 

@@ -119,19 +119,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Colours */}
-      <section className="py-24 lg:py-32 bg-[#1A1A1A] text-white">
+      {/* Featured Colours — cream + black palette */}
+      <section className="py-24 lg:py-32 bg-[#F2EEE6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div className="max-w-2xl">
-              <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Featured Range</div>
-              <h2 className="font-serif text-white text-4xl lg:text-5xl leading-[1.1]">
+              <div className="text-[#1A1A1A]/60 text-xs uppercase tracking-[0.35em] mb-5">Featured Range</div>
+              <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1]">
                 Statement marbles, hand-picked.
               </h2>
             </div>
             <Link
               to="/colours"
-              className="inline-flex items-center gap-2 text-[#B8956A] text-xs uppercase tracking-[0.25em] group"
+              className="inline-flex items-center gap-2 text-[#1A1A1A] text-xs uppercase tracking-[0.25em] border-b border-[#1A1A1A] pb-1 hover:text-[#B8956A] hover:border-[#B8956A] transition-colors group"
             >
               View all colours
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -142,7 +142,7 @@ export default function Home() {
             {COLOR_RANGES[2].colors.slice(0, 8).map((c, idx) => (
               <Reveal key={c.name} delay={idx * 60}>
                 <div className="group cursor-pointer">
-                  <div className="overflow-hidden aspect-[3/4] mb-4">
+                  <div className="overflow-hidden aspect-square bg-white border border-[#E5E0D5] mb-4">
                     <img
                       src={c.image}
                       alt={c.name}
@@ -151,8 +151,8 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="font-serif text-base text-white">{c.name}</span>
-                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#B8956A] opacity-0 group-hover:opacity-100 transition-opacity">View</span>
+                    <span className="font-serif text-base text-[#1A1A1A]">{c.name}</span>
+                    <span className="text-[10px] uppercase tracking-[0.25em] text-[#1A1A1A]/50 opacity-0 group-hover:opacity-100 transition-opacity">View</span>
                   </div>
                 </div>
               </Reveal>

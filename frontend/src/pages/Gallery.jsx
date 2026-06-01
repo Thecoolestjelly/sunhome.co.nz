@@ -59,7 +59,7 @@ export default function Gallery() {
       </section>
 
       {/* Filters */}
-      <div className="sticky top-[72px] z-30 bg-[#FAF8F3]/90 backdrop-blur-md border-y border-[#E5E0D5]">
+      <div className="sticky top-[88px] z-30 bg-[#FAF8F3]/95 backdrop-blur-md border-y border-[#E5E0D5]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-wrap gap-3 lg:gap-8 py-5">
           {categories.map((c) => (
             <button
@@ -81,26 +81,26 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Grid */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-3 lg:px-6">
-          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 lg:gap-4 [column-fill:_balance]">
+      {/* Grid — uniform 4:3 cards, consistent crop */}
+      <section className="py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4">
             {filtered.map((g, idx) => (
               <button
                 key={`${g.src}-${idx}`}
                 onClick={() => setLightbox(idx)}
-                className="group relative block w-full mb-3 lg:mb-4 break-inside-avoid overflow-hidden bg-[#F2EEE6] focus:outline-none"
+                className="group relative block aspect-[4/3] w-full overflow-hidden bg-[#F2EEE6] focus:outline-none"
               >
                 <img
                   src={g.src}
                   alt={g.caption}
                   loading="lazy"
-                  className="w-full h-auto block transition-transform duration-[1100ms] ease-out group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-[#B8956A] mb-1">{g.category}</div>
-                  <div className="font-serif text-white text-lg leading-tight text-left">{g.caption}</div>
+                  <div className="font-serif text-white text-base leading-tight text-left">{g.caption}</div>
                 </div>
               </button>
             ))}

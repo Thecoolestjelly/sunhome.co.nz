@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import { HERO_SLIDES } from "../mock";
+import { HERO_SLIDES, buildEnquiryMailto } from "../mock";
 
 export default function HeroCarousel() {
   const [i, setI] = useState(0);
@@ -30,7 +30,7 @@ export default function HeroCarousel() {
             }`}
             style={{ backgroundImage: `url(${s.image})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/30 to-black/80" />
         </div>
       ))}
 
@@ -46,22 +46,24 @@ export default function HeroCarousel() {
                   : "opacity-0 translate-y-6 pointer-events-none absolute"
               }`}
             >
-              <div className="text-[#B8956A] text-xs uppercase tracking-[0.4em] mb-6">
-                {s.eyebrow}
+              <div className="inline-flex items-center gap-3 mb-6 bg-black/30 backdrop-blur-sm border border-white/15 rounded-full px-4 py-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B8956A]" />
+                <span className="text-white text-[11px] uppercase tracking-[0.35em]">{s.eyebrow}</span>
               </div>
-              <h1 className="font-serif text-white text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-7">
+              <h1 className="font-serif text-white text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-7" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>
                 {s.title}
               </h1>
-              <p className="text-white/85 text-base md:text-lg max-w-xl leading-relaxed mb-10">
+              <p className="text-white text-base md:text-lg max-w-xl leading-relaxed mb-10" style={{ textShadow: '0 1px 12px rgba(0,0,0,0.55)' }}>
                 {s.subtitle}
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <Link
-                  to="/contact"
+                <a
+                  href={buildEnquiryMailto({ subject: "Free Estimate Request" })}
                   className="inline-flex items-center gap-2 bg-[#FAF8F3] text-[#1A1A1A] px-7 py-4 rounded-full text-sm uppercase tracking-[0.18em] hover:bg-[#B8956A] hover:text-white transition-colors duration-300"
                 >
+                  <Mail className="w-4 h-4" />
                   Get a Free Estimate
-                </Link>
+                </a>
                 <Link
                   to="/colours"
                   className="inline-flex items-center gap-2 border border-white/40 text-white px-7 py-4 rounded-full text-sm uppercase tracking-[0.18em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"

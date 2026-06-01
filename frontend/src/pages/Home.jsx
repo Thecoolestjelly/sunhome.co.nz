@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Award, Clock, Cog, BadgeCheck, Users, Tag, ArrowRight, Quote } from "lucide-react";
+import { ArrowUpRight, Award, Clock, Cog, BadgeCheck, Users, Tag, ArrowRight, Quote, Star } from "lucide-react";
 import HeroCarousel from "../components/HeroCarousel";
 import Reveal from "../components/Reveal";
-import { SERVICES, FEATURES, TESTIMONIALS, BRANDS, COLOR_RANGES } from "../mock";
+import RatingBanner from "../components/RatingBanner";
+import StarRating from "../components/StarRating";
+import EnquireButton from "../components/EnquireButton";
+import { SERVICES, FEATURES, TESTIMONIALS, BRANDS, COLOR_RANGES, SITE } from "../mock";
 
 const FEATURE_ICONS = [Award, Clock, Cog, BadgeCheck, Users, Tag];
 
@@ -12,7 +15,7 @@ export default function Home() {
     <div className="bg-[#FAF8F3]">
       <HeroCarousel />
 
-      {/* Intro / Stats */}
+      {/* Intro / Stats / Rating */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-20">
           <Reveal className="lg:col-span-5">
@@ -20,6 +23,9 @@ export default function Home() {
             <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-6">
               Auckland's most trusted stone fabricator since 2008.
             </h2>
+            <div className="mt-8">
+              <RatingBanner />
+            </div>
           </Reveal>
           <Reveal delay={150} className="lg:col-span-7">
             <p className="text-[#4A4A4A] text-lg leading-relaxed mb-10">
@@ -158,29 +164,48 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <Reveal className="text-center max-w-2xl mx-auto mb-16">
+          <Reveal className="text-center max-w-2xl mx-auto mb-10">
             <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Client Stories</div>
-            <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1]">
+            <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-6">
               Trusted by hundreds of New Zealanders.
             </h2>
+            <div className="flex justify-center">
+              <RatingBanner />
+            </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {TESTIMONIALS.map((t, idx) => (
-              <Reveal key={t.name} delay={idx * 100}>
-                <div className="bg-white border border-[#E5E0D5] p-8 lg:p-10 h-full hover:border-[#B8956A] transition-colors duration-500">
-                  <Quote className="w-7 h-7 text-[#B8956A] mb-6" />
-                  <p className="text-[#1A1A1A] text-base lg:text-lg leading-relaxed mb-8 font-serif">
-                    “{t.quote}”
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 mt-14">
+            {TESTIMONIALS.slice(0, 6).map((t, idx) => (
+              <Reveal key={t.name} delay={idx * 80}>
+                <div className="bg-white border border-[#E5E0D5] p-7 lg:p-8 h-full hover:border-[#B8956A] transition-colors duration-500 flex flex-col">
+                  <div className="flex items-center justify-between mb-5">
+                    <StarRating value={t.rating} size={16} />
+                    <span className="text-[10px] uppercase tracking-[0.22em] text-[#6B6B6B]">{t.when}</span>
+                  </div>
+                  <Quote className="w-5 h-5 text-[#B8956A] mb-3" />
+                  <p className="text-[#1A1A1A] text-[15px] leading-relaxed mb-6 flex-1">
+                    {t.quote}
                   </p>
-                  <div className="border-t border-[#E5E0D5] pt-5">
+                  <div className="border-t border-[#E5E0D5] pt-4">
                     <div className="text-[#1A1A1A] text-sm mb-1">{t.name}</div>
-                    <div className="text-[#6B6B6B] text-xs uppercase tracking-[0.2em]">{t.source}</div>
+                    <div className="text-[#6B6B6B] text-[11px] uppercase tracking-[0.18em]">{t.source}</div>
                   </div>
                 </div>
               </Reveal>
             ))}
           </div>
+
+          <Reveal className="mt-12 text-center">
+            <a
+              href="https://www.google.com/maps/place/Sunhome+Group+Ltd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#B8956A] hover:text-[#1A1A1A] transition-colors"
+            >
+              Read all reviews on Google
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </Reveal>
         </div>
       </section>
 
@@ -219,15 +244,18 @@ export default function Home() {
             Visit our East Tamaki showroom or get a free, no-obligation quote today.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
+            <EnquireButton variant="light" subject="Quote Request from Home page">
+              Email Sales for a Quote
+            </EnquireButton>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-[#FAF8F3] text-[#1A1A1A] px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] hover:bg-[#B8956A] hover:text-white transition-colors duration-300"
+              className="inline-flex items-center gap-2 border border-white/40 text-white px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
             >
-              Request a Quote
+              Contact Page
             </Link>
             <Link
               to="/gallery"
-              className="inline-flex items-center gap-2 border border-white/40 text-white px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
+              className="inline-flex items-center gap-2 border border-white/40 text-white px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
             >
               View Our Work
             </Link>

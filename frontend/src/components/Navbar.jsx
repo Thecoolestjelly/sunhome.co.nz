@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
-import { SITE } from "../mock";
+import { SITE, buildEnquiryMailto } from "../mock";
 
 const LINKS = [
   { to: "/", label: "Home" },
@@ -37,13 +37,15 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#FAF8F3] font-serif text-lg leading-none group-hover:bg-[#B8956A] transition-colors duration-300">
-            S
-          </div>
-          <div className="leading-tight">
-            <div className="font-serif text-[#1A1A1A] text-lg tracking-wide">Sunhome</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-[#6B6B6B]">Stone · Auckland</div>
+        <Link to="/" className="flex items-center gap-3 group" aria-label="Sunhome Group Ltd home">
+          <img
+            src={SITE.logo}
+            alt="Sunhome Group Ltd"
+            className="h-10 lg:h-11 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
+            onError={(e) => { e.currentTarget.style.display = 'none'; }}
+          />
+          <div className="hidden sm:block leading-tight border-l border-[#E5E0D5] pl-3">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-[#6B6B6B]">Stone · Auckland · Est. 2008</div>
           </div>
         </Link>
 

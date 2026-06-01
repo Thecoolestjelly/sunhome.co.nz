@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Sparkles, Layers, Wallet } from "lucide-react";
+import { ArrowRight, ShieldCheck, Sparkles, Layers, Wallet, Mail } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { COLOR_RANGES, FULL_SLABS, BRANDS } from "../mock";
+import EnquireButton from "../components/EnquireButton";
+import { buildEnquiryMailto, COLOR_RANGES, FULL_SLABS, BRANDS } from "../mock";
 
 const FEATURES = [
   { icon: ShieldCheck, title: "Harder & Safer", desc: "Engineered quartz — harder, stronger and safer than natural stone." },
@@ -84,7 +85,15 @@ export default function Colours() {
                           loading="lazy"
                           className="w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-[#1A1A1A]/0 group-hover:bg-[#1A1A1A]/15 transition-colors duration-500" />
+                        <div className="absolute inset-0 bg-[#1A1A1A]/0 group-hover:bg-[#1A1A1A]/40 transition-colors duration-500 flex items-end justify-center p-4">
+                          <a
+                            href={buildEnquiryMailto({ subject: `Enquiry — ${c.name}`, colour: c.name })}
+                            className="opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 inline-flex items-center gap-2 bg-[#FAF8F3] text-[#1A1A1A] px-4 py-2.5 rounded-full text-[10px] uppercase tracking-[0.22em] hover:bg-[#B8956A] hover:text-white"
+                          >
+                            <Mail className="w-3 h-3" />
+                            Enquire
+                          </a>
+                        </div>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="font-serif text-[#1A1A1A] text-base">{c.name}</span>
@@ -159,15 +168,20 @@ export default function Colours() {
       {/* CTA */}
       <section className="py-24 bg-[#1A1A1A]">
         <Reveal className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-white text-3xl lg:text-5xl mb-6 leading-tight">
+          <h2 className="font-serif text-white text-3xl lg:text-5xl mb-8 leading-tight">
             Visit the showroom to feel the stone.
           </h2>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 bg-[#B8956A] text-white px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] hover:bg-[#FAF8F3] hover:text-[#1A1A1A] transition-colors duration-300"
-          >
-            Book a Visit
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <EnquireButton variant="accent" subject="Showroom Visit Request">
+              Email Sales to Book
+            </EnquireButton>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 border border-white/30 text-white px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
+            >
+              See Contact Info
+            </Link>
+          </div>
         </Reveal>
       </section>
     </div>

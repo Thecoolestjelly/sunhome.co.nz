@@ -162,9 +162,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="text-center max-w-2xl mx-auto mb-10">
             <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">{TEXT.home.reviewsLabel}</div>
-            <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-6">
+            <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-5">
               {TEXT.home.reviewsHeadline}
             </h2>
+            <p className="text-[#4A4A4A] text-base lg:text-lg leading-relaxed mb-8">
+              {TEXT.home.reviewsParagraph}
+            </p>
             <div className="flex justify-center">
               <RatingBanner />
             </div>

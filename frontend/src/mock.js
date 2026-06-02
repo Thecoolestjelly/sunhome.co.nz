@@ -54,12 +54,12 @@ export const TEXT = {
   // HOMEPAGE
   // -------------------------------------------------------------
   home: {
-    // The small label above the "Auckland's most trusted..." headline
+    // The small label above the "..." headline
     whoWeAreLabel:      "Who We Are",
     // The H2 introducing your company
     whoWeAreHeadline:   "Auckland's most trusted stone fabricator since 2008.",
     // The intro paragraph below — THIS IS YOUR COMPANY INTRO. Make it personal!
-    whoWeAreParagraph:  "Sunhome Group Ltd has proudly supplied premium stone benchtops to residential and commercial clients across Auckland for over 15 years. Combining the latest 5-axis CNC technology with master craftsmen, we deliver exceptional product and service — at honest, competitive pricing.",
+    whoWeAreParagraph:  "For more than 15 years, Sunhome Group Ltd has been supplying high quality stone benchtops to homes and businesses throughout Auckland. From family kitchens to large commercial projects, we combine functionality and aesthetics to deliver durable, beautiful results at an affordable price.",
 
     // The 3 stats next to the intro paragraph
     stats: [
@@ -70,12 +70,12 @@ export const TEXT = {
 
     // Services section
     servicesLabel:      "What We Do",
-    servicesHeadline:   "Stone for every space.",
+    servicesHeadline:   "Custom stone solutions for every project.",
 
     // Why Sunhome section
-    whyLabel:           "Why Sunhome",
+    whyLabel:           "Why Choose Sunhome?",
     whyHeadline:        "The detail is in the difference.",
-    whyParagraph:       "Fifteen years sharpening every joint, every edge, every conversation. The result — stone you'll be proud to live with.",
+    whyParagraph:       "Experience, quality workmanship and honest service have made us a trusted choice for many Auckland homeowners for over 15 years.",
 
     // Featured marbles section
     featuredLabel:      "Featured Range",
@@ -84,17 +84,18 @@ export const TEXT = {
 
     // Testimonials section
     reviewsLabel:       "Client Stories",
-    reviewsHeadline:    "Trusted by hundreds of New Zealanders.",
+    reviewsHeadline:    "What our customers say about our service.",
+    reviewsParagraph:   "We're proud of the relationships we've built and the projects we have completed across Auckland.",
     reviewsMoreCta:     "Read all reviews on Google",
 
     // Partner brand strip
-    brandsHeadline:     "We supply the most trusted engineered quartz brands on the NZ market.",
+    brandsHeadline:     "We work with leading engineered stone suppliers to offer a wide selection of colours, finishes and styles for every project.",
     brandsLabel:        "Partner Brands",
 
     // The big closing CTA at the bottom of the homepage
     ctaLabel:           "Start Your Project",
-    ctaHeadline:        "Ready to transform your kitchen?",
-    ctaParagraph:       "Visit our East Tamaki showroom or get a free, no-obligation quote today.",
+    ctaHeadline:        "Let's bring your project to life.",
+    ctaParagraph:       "Visit our East Tamaki showroom or contact our sales team for a free, no-obligation quote.",
     ctaPrimary:         "Email Sales for a Quote",
     ctaSecondary:       "Contact Page",
     ctaTertiary:        "View Our Work",
@@ -106,7 +107,7 @@ export const TEXT = {
   colours: {
     label:              "Project Quartz",
     headline:           "Colour Samples",
-    intro:              "From timeless whites to dramatic veined marbles — explore our complete in-stock range. Visit the East Tamaki showroom to see samples in person.",
+    intro:              "Premium engineered quartz and natural stone benchtops crafted to bring style, durability and value to every space.",
 
     // The 4 small benefit cards on the right
     benefits: [
@@ -134,7 +135,7 @@ export const TEXT = {
   // -------------------------------------------------------------
   gallery: {
     label:              "Our Work",
-    headline:           "A portfolio shaped by precision.",
+    headline:           "Auckland stone benchtops crafted with precision.",
     intro:              "Waterfall ends, mitered joints, top-mount and under-mount sinks, and benchtops in thicknesses from 20mm to 60mm. Every project hand-finished in our Auckland workshop.",
   },
 
@@ -218,20 +219,20 @@ export const HERO_SLIDES = [
   {
     image: "/assets/colors/cal-kitchen.jpg",
     eyebrow: "Since 2008",
-    title: "Crafting Stone, Defining Spaces",
-    subtitle: "Premium engineered quartz and natural stone benchtops for Auckland homes and businesses.",
+    title: "Premium stone benchtops for Auckland homes & businesses",
+    subtitle: "Expertly crafted engineered quartz and natural stone surfaces, designed to be both functional and aesthetic to enhance kitchens, bathrooms and work spaces.",
   },
   {
     image: "/assets/colors/kitchen-1.jpg",
     eyebrow: "Residential & Commercial",
-    title: "Calacatta. Carrara. Character.",
-    subtitle: "From subtle whites to bold veining — the right stone for every kitchen.",
+    title: "Leading Stone Fabricator Service in Auckland Areas",
+    subtitle: "Sunhome Group Ltd has been established since 2008. We are proudly providing high quality stone benchtops to both residential and commercial clients. Our latest CNC and skilled workers provide the best quality product and service at a very affordable price.",
   },
   {
     image: "/assets/colors/kitchen-2.jpg",
-    eyebrow: "15+ Years Experience",
-    title: "Precision, Powered by CNC.",
-    subtitle: "Skilled stonemasons and 5-axis CNC technology — every edge, every joint, perfect.",
+    eyebrow: "Crafted to Last",
+    title: "Stone benchtops crafted to last",
+    subtitle: "From timeless striking Calacatta White to Diamond Black benchtops, we help Auckland homeowners create kitchens that will last for years to come.",
   },
 ];
 
@@ -368,7 +369,7 @@ export const COLOR_RANGES = [
   },
   {
     name: "High Range",
-    blurb: "Statement marbles — bold veining and luxurious finishes.",
+    blurb: "Bold and luxurious.",
     colors: [
       { name: "Calacatta White", image: "/assets/colors/calacatta-white-square.jpg" },
       { name: "Calacatta Blanco", image: "/assets/colors/calacatta-blanco-square.jpg" },

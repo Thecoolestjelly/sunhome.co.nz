@@ -288,6 +288,13 @@ export const GALLERY = [
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Blue-Pearl-scaled.jpg", caption: "Blue Pearl", category: "Granite" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/tan-brown-scaled.jpg", caption: "Tan Brown", category: "Granite" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/front1-1-scaled.jpg", caption: "Steel Grey", category: "Granite" },
+
+  // Factory / Showroom
+  { src: "/assets/colors/showroom-1.jpg", caption: "Factory Showroom Floor", category: "Factory" },
+  { src: "/assets/colors/showroom-2.jpg", caption: "Slab Storage", category: "Factory" },
+  { src: "/assets/colors/showroom-3.jpg", caption: "Workshop View", category: "Factory" },
+  { src: "/assets/colors/showroom-4.jpg", caption: "Inside the Workshop", category: "Factory" },
+  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/5-Axis-CNC-Machine-scaled.jpg", caption: "5-Axis CNC Machine", category: "Factory" },
 ];
 
 // SINKS — Updated 2026 pricing (S400R80 and D350-350R80 removed)

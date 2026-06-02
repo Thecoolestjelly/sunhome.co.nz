@@ -35,12 +35,12 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-10 flex items-center justify-between gap-4">
-        {/* Logo — transparent PNG, sized ~1/4 of navbar height area */}
+        {/* Logo — transparent PNG, sized large for visibility */}
         <Link to="/" className="flex items-center group shrink-0" aria-label="Sunhome Group Ltd home">
           <img
             src={SITE.logo}
             alt="Sunhome Group Ltd"
-            className="h-14 sm:h-16 lg:h-20 w-auto object-contain transition-opacity duration-300 group-hover:opacity-85"
+            className="h-16 sm:h-20 lg:h-24 w-auto object-contain transition-opacity duration-300 group-hover:opacity-85"
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
           />
         </Link>

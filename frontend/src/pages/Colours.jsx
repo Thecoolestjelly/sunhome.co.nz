@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ShieldCheck, Sparkles, Layers, Wallet, Mail } from "lucide-react";
 import Reveal from "../components/Reveal";
 import EnquireButton from "../components/EnquireButton";
-import { buildEnquiryMailto, COLOR_RANGES, FULL_SLABS, BRANDS } from "../mock";
+import { buildEnquiryMailto, COLOR_RANGES, FULL_SLABS, BRANDS, TEXT } from "../mock";
 
-const FEATURES = [
-  { icon: ShieldCheck, title: "Harder & Safer", desc: "Engineered quartz — harder, stronger and safer than natural stone." },
-  { icon: Sparkles, title: "Easy to Maintain", desc: "Simple wipe-down with warm soapy water. No sealing needed." },
-  { icon: Layers, title: "Wide Selection", desc: "Hundreds of colours and finishes in stock and ready to fabricate." },
-  { icon: Wallet, title: "Honest Pricing", desc: "Pay only for what you use — the most competitive prices in Auckland." },
-];
+const FEATURES = TEXT.colours.benefits.map((b, i) => ({
+  ...b,
+  icon: [ShieldCheck, Sparkles, Layers, Wallet][i],
+}));
 
 export default function Colours() {
   const [active, setActive] = useState("All");
@@ -22,12 +20,12 @@ export default function Colours() {
       <section className="pt-40 pb-20 lg:pt-48 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
           <Reveal className="lg:col-span-7">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-6">Project Quartz</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-6">{TEXT.colours.label}</div>
             <h1 className="font-serif text-[#1A1A1A] text-5xl lg:text-7xl leading-[1.02] mb-6">
-              Colour Samples
+              {TEXT.colours.headline}
             </h1>
             <p className="text-[#4A4A4A] text-lg leading-relaxed max-w-2xl">
-              From timeless whites to dramatic veined marbles — explore our complete in-stock range. Visit the East Tamaki showroom to see samples in person.
+              {TEXT.colours.intro}
             </p>
           </Reveal>
           <Reveal delay={150} className="lg:col-span-5 grid grid-cols-2 gap-4">
@@ -112,12 +110,12 @@ export default function Colours() {
       <section className="py-24 lg:py-32 bg-[#F2EEE6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="text-center max-w-2xl mx-auto mb-16">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">In Stock</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">{TEXT.colours.slabsLabel}</div>
             <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1]">
-              Full slab preview
+              {TEXT.colours.slabsHeadline}
             </h2>
             <p className="text-[#4A4A4A] mt-5 leading-relaxed">
-              See the full pattern, veining and movement of each stone before you decide.
+              {TEXT.colours.slabsParagraph}
             </p>
           </Reveal>
 
@@ -152,7 +150,7 @@ export default function Colours() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="text-center mb-12">
             <p className="font-serif text-[#1A1A1A] text-xl lg:text-2xl max-w-3xl mx-auto">
-              We also supply the full Caesarstone, Silestone, Uniquartz, Trendstone and Y&J Stone colour ranges.
+              {TEXT.colours.brandStrip}
             </p>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 items-center">
@@ -169,17 +167,17 @@ export default function Colours() {
       <section className="py-24 bg-[#1A1A1A]">
         <Reveal className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-white text-3xl lg:text-5xl mb-8 leading-tight">
-            Visit the showroom to feel the stone.
+            {TEXT.colours.ctaHeadline}
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <EnquireButton variant="accent" subject="Showroom Visit Request">
-              Email Sales to Book
+              {TEXT.colours.ctaPrimary}
             </EnquireButton>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 border border-white/30 text-white px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
             >
-              See Contact Info
+              {TEXT.colours.ctaSecondary}
             </Link>
           </div>
         </Reveal>

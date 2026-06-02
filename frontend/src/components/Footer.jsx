@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { SITE } from "../mock";
+import { SITE, TEXT } from "../mock";
 
 export default function Footer() {
   return (
@@ -13,17 +13,17 @@ export default function Footer() {
               S
             </div>
             <div>
-              <div className="font-serif text-xl text-[#FAF8F3]">Sunhome Group</div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-[#B8956A]">Est. 2008</div>
+              <div className="font-serif text-xl text-[#FAF8F3]">{SITE.name}</div>
+              <div className="text-[10px] uppercase tracking-[0.25em] text-[#B8956A]">{TEXT.footer.establishedLabel}</div>
             </div>
           </div>
           <p className="text-sm leading-relaxed text-[#A6A39C] max-w-xs">
-            Auckland's trusted stone fabricator — premium engineered quartz and natural stone, crafted with precision since 2008.
+            {TEXT.footer.blurb}
           </p>
         </div>
 
         <div>
-          <h4 className="text-xs uppercase tracking-[0.25em] text-[#B8956A] mb-5">Explore</h4>
+          <h4 className="text-xs uppercase tracking-[0.25em] text-[#B8956A] mb-5">{TEXT.footer.exploreTitle}</h4>
           <ul className="space-y-3 text-sm">
             <li><Link to="/" className="hover:text-[#B8956A] transition-colors">Home</Link></li>
             <li><Link to="/colours" className="hover:text-[#B8956A] transition-colors">Colour Samples</Link></li>
@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-xs uppercase tracking-[0.25em] text-[#B8956A] mb-5">Get In Touch</h4>
+          <h4 className="text-xs uppercase tracking-[0.25em] text-[#B8956A] mb-5">{TEXT.footer.contactTitle}</h4>
           <ul className="space-y-4 text-sm text-[#A6A39C]">
             <li className="flex items-start gap-3">
               <MapPin className="w-4 h-4 mt-0.5 text-[#B8956A]" />
@@ -52,19 +52,19 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-xs uppercase tracking-[0.25em] text-[#B8956A] mb-5">Showroom Hours</h4>
+          <h4 className="text-xs uppercase tracking-[0.25em] text-[#B8956A] mb-5">{TEXT.footer.hoursTitle}</h4>
           <ul className="space-y-3 text-sm text-[#A6A39C]">
             <li className="flex items-start gap-3">
               <Clock className="w-4 h-4 mt-0.5 text-[#B8956A]" />
               <div>
-                <div className="text-[#FAF8F3] mb-1">Showroom</div>
+                <div className="text-[#FAF8F3] mb-1">{TEXT.footer.showroomLabel}</div>
                 <div>{SITE.hours.showroom}</div>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <Clock className="w-4 h-4 mt-0.5 text-[#B8956A]" />
               <div>
-                <div className="text-[#FAF8F3] mb-1">Pick Up</div>
+                <div className="text-[#FAF8F3] mb-1">{TEXT.footer.pickupLabel}</div>
                 <div>{SITE.hours.pickup}</div>
               </div>
             </li>
@@ -74,8 +74,8 @@ export default function Footer() {
 
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#6B6B6B]">
-          <div>© {new Date().getFullYear()} Sunhome Group Ltd. All rights reserved.</div>
-          <div className="tracking-[0.2em] uppercase">Auckland · New Zealand</div>
+          <div>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</div>
+          <div className="tracking-[0.2em] uppercase">{TEXT.footer.bottomLine}</div>
         </div>
       </div>
     </footer>

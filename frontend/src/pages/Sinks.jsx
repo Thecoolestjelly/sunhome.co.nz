@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Check, Ruler, Wrench, Droplets, Sparkles, ShieldCheck, ChevronRight, Mail } from "lucide-react";
 import Reveal from "../components/Reveal";
 import EnquireButton from "../components/EnquireButton";
-import { SINKS, SINK_TYPES, THICKNESSES, COLOR_RANGES } from "../mock";
+import { SINKS, SINK_TYPES, THICKNESSES, COLOR_RANGES, TEXT } from "../mock";
 
 const EDGES = [
   {
@@ -32,14 +32,14 @@ export default function Sinks() {
       <section className="pt-40 pb-16 lg:pt-48 lg:pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-end">
           <Reveal className="lg:col-span-7">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-6">Stainless Steel Sinks · 2026 Pricing</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-6">{TEXT.sinks.label}</div>
             <h1 className="font-serif text-[#1A1A1A] text-5xl lg:text-7xl leading-[1.02]">
-              Sinks, edges & every fine detail.
+              {TEXT.sinks.headline}
             </h1>
           </Reveal>
           <Reveal delay={150} className="lg:col-span-5">
             <p className="text-[#4A4A4A] text-lg leading-relaxed">
-              Handmade premium 1.2mm stainless steel sinks with 5-year warranty — single, one-and-a-half and double bowl options. All prices below exclude GST. Machined sink cut-outs handled in-house on our 5-axis CNC.
+              {TEXT.sinks.intro}
             </p>
           </Reveal>
         </div>
@@ -52,13 +52,13 @@ export default function Sinks() {
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <Droplets className="w-5 h-5 text-[#B8956A]" />
-                <h2 className="font-serif text-[#1A1A1A] text-3xl lg:text-4xl">Sink Models & Pricing</h2>
+                <h2 className="font-serif text-[#1A1A1A] text-3xl lg:text-4xl">{TEXT.sinks.pricingLabel}</h2>
               </div>
-              <p className="text-[#6B6B6B] text-sm max-w-xl">Click "Enquire" on any sink to open an email pre-filled with that model and your preferences.</p>
+              <p className="text-[#6B6B6B] text-sm max-w-xl">{TEXT.sinks.pricingHelper}</p>
             </div>
             <div className="flex items-center gap-2 text-xs text-[#6B6B6B] uppercase tracking-[0.2em]">
               <ShieldCheck className="w-4 h-4 text-[#B8956A]" />
-              5-Year Warranty · NZ Stock
+              {TEXT.sinks.pricingBadge}
             </div>
           </Reveal>
 
@@ -72,11 +72,11 @@ export default function Sinks() {
 
           <Reveal className="mt-14 bg-white border border-[#E5E0D5] p-6 lg:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
             <div>
-              <div className="text-[#B8956A] text-xs uppercase tracking-[0.3em] mb-2">Not sure which fits?</div>
-              <p className="text-[#1A1A1A] font-serif text-xl">Tell us your cabinet width — we'll match the right sink.</p>
+              <div className="text-[#B8956A] text-xs uppercase tracking-[0.3em] mb-2">{TEXT.sinks.helpBoxEyebrow}</div>
+              <p className="text-[#1A1A1A] font-serif text-xl">{TEXT.sinks.helpBoxTitle}</p>
             </div>
             <EnquireButton subject="Sink Sizing Help" notes="Please help me choose the right sink — my cabinet width is: " variant="primary">
-              Email Sales for Sizing Help
+              {TEXT.sinks.helpBoxButton}
             </EnquireButton>
           </Reveal>
         </div>
@@ -87,7 +87,7 @@ export default function Sinks() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="flex items-center gap-3 mb-12">
             <Sparkles className="w-5 h-5 text-[#B8956A]" />
-            <h2 className="font-serif text-[#1A1A1A] text-3xl lg:text-4xl">Sink Cut-Out Styles</h2>
+            <h2 className="font-serif text-[#1A1A1A] text-3xl lg:text-4xl">{TEXT.sinks.mountStylesTitle}</h2>
           </Reveal>
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -126,7 +126,7 @@ export default function Sinks() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="flex items-center gap-3 mb-12">
             <Wrench className="w-5 h-5 text-[#B8956A]" />
-            <h2 className="font-serif text-[#1A1A1A] text-3xl lg:text-4xl">Edges & Joints</h2>
+            <h2 className="font-serif text-[#1A1A1A] text-3xl lg:text-4xl">{TEXT.sinks.edgesTitle}</h2>
           </Reveal>
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -156,13 +156,13 @@ export default function Sinks() {
           <Reveal className="max-w-2xl mb-16">
             <div className="flex items-center gap-3 mb-5">
               <Ruler className="w-5 h-5 text-[#B8956A]" />
-              <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em]">Thickness Options</div>
+              <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em]">{TEXT.sinks.thicknessLabel}</div>
             </div>
             <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-5">
-              From subtle to architectural.
+              {TEXT.sinks.thicknessHeadline}
             </h2>
             <p className="text-[#4A4A4A] leading-relaxed">
-              We stock and fabricate every common thickness. Most kitchens use 20mm or 30mm — mitered joints make any thickness look monolithic.
+              {TEXT.sinks.thicknessParagraph}
             </p>
           </Reveal>
 
@@ -188,19 +188,19 @@ export default function Sinks() {
         />
         <div className="absolute inset-0 bg-[#1A1A1A]/80" />
         <Reveal className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <div className="text-[#B8956A] text-xs uppercase tracking-[0.4em] mb-6">Crafted On-Site</div>
+          <div className="text-[#B8956A] text-xs uppercase tracking-[0.4em] mb-6">{TEXT.sinks.ctaLabel}</div>
           <h2 className="font-serif text-white text-4xl lg:text-5xl leading-tight mb-8">
-            Tell us about your sink, and we'll match it perfectly.
+            {TEXT.sinks.ctaHeadline}
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <EnquireButton variant="light" subject="Full Kitchen Quote">
-              Email Sales for a Quote
+              {TEXT.sinks.ctaPrimary}
             </EnquireButton>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 border border-white/40 text-white px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
             >
-              Contact Page
+              {TEXT.sinks.ctaSecondary}
               <ChevronRight className="w-3.5 h-3.5" />
             </Link>
           </div>

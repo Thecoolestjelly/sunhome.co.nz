@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ExternalLink } from "lu
 import Reveal from "../components/Reveal";
 import RatingBanner from "../components/RatingBanner";
 import EnquireButton from "../components/EnquireButton";
-import { SITE } from "../mock";
+import { SITE, TEXT } from "../mock";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -15,7 +15,7 @@ export default function Contact() {
   const onSubmit = (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.phone || !form.subject || !form.message) {
-      setError("Please fill in all required fields.");
+      setError(TEXT.contact.formError);
       return;
     }
     setError("");
@@ -35,16 +35,16 @@ export default function Contact() {
       <section className="pt-40 pb-16 lg:pt-48 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 items-end">
           <Reveal className="lg:col-span-8">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-6">Get In Touch</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-6">{TEXT.contact.label}</div>
             <h1 className="font-serif text-[#1A1A1A] text-5xl lg:text-7xl leading-[1.02] mb-6 max-w-3xl">
-              Let's bring your project to life.
+              {TEXT.contact.headline}
             </h1>
             <p className="text-[#4A4A4A] text-lg leading-relaxed max-w-2xl mb-8">
-              Visit our Ōtara showroom, give us a call, or send a message — we usually reply the same business day.
+              {TEXT.contact.intro}
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <EnquireButton variant="primary" subject="General Enquiry">
-                Email Sales@sunhome.co.nz
+                {TEXT.contact.primaryBtn}
               </EnquireButton>
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}
@@ -67,10 +67,10 @@ export default function Contact() {
           {/* Left — info */}
           <Reveal className="lg:col-span-5 space-y-10">
             {[
-              { icon: MapPin, title: "Visit the Showroom", lines: [SITE.address, "(Behind the wine shop, entrance off East Tamaki Road, left-hand driveway of the liquor shop.)"] },
-              { icon: Phone, title: "Call Us", lines: [`${SITE.phone}`, `${SITE.mobile}`] },
-              { icon: Mail, title: "Email Us", lines: [SITE.email] },
-              { icon: Clock, title: "Hours", lines: [`Showroom: ${SITE.hours.showroom}`, `Pick Up: ${SITE.hours.pickup}`] },
+              { icon: MapPin, title: TEXT.contact.info.visitTitle, lines: [SITE.address, TEXT.contact.info.visitExtra] },
+              { icon: Phone, title: TEXT.contact.info.callTitle, lines: [`${SITE.phone}`, `${SITE.mobile}`] },
+              { icon: Mail, title: TEXT.contact.info.emailTitle, lines: [SITE.email] },
+              { icon: Clock, title: TEXT.contact.info.hoursTitle, lines: [`${TEXT.contact.info.hoursShowroom}: ${SITE.hours.showroom}`, `${TEXT.contact.info.hoursPickup}: ${SITE.hours.pickup}`] },
             ].map((b) => (
               <div key={b.title} className="flex gap-5">
                 <div className="w-12 h-12 border border-[#E5E0D5] flex items-center justify-center shrink-0">
@@ -92,21 +92,21 @@ export default function Contact() {
               {submitted ? (
                 <div className="py-10 text-center">
                   <CheckCircle2 className="w-14 h-14 text-[#B8956A] mx-auto mb-6" />
-                  <h3 className="font-serif text-[#1A1A1A] text-3xl mb-4">Thank you.</h3>
+                  <h3 className="font-serif text-[#1A1A1A] text-3xl mb-4">{TEXT.contact.formSuccessTitle}</h3>
                   <p className="text-[#6B6B6B] leading-relaxed max-w-md mx-auto mb-8">
-                    Your enquiry has been received. We'll respond to you shortly. For urgent matters, please call {SITE.phone}.
+                    {TEXT.contact.formSuccessBody} {SITE.phone}.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
                     className="text-xs uppercase tracking-[0.25em] text-[#B8956A] hover:text-[#1A1A1A] transition-colors"
                   >
-                    Send another enquiry
+                    {TEXT.contact.formSuccessLink}
                   </button>
                 </div>
               ) : (
                 <form onSubmit={onSubmit} className="space-y-6">
-                  <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-2">Request a Quote</div>
-                  <h2 className="font-serif text-[#1A1A1A] text-3xl lg:text-4xl mb-6">Send us a message</h2>
+                  <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-2">{TEXT.contact.formLabel}</div>
+                  <h2 className="font-serif text-[#1A1A1A] text-3xl lg:text-4xl mb-6">{TEXT.contact.formHeadline}</h2>
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Field label="Name *" name="name" value={form.name} onChange={onChange} />
@@ -140,10 +140,10 @@ export default function Contact() {
                     type="submit"
                     className="inline-flex items-center gap-3 bg-[#1A1A1A] text-[#FAF8F3] px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] hover:bg-[#B8956A] transition-colors duration-300"
                   >
-                    Send Request
+                    {TEXT.contact.formSubmit}
                     <Send className="w-4 h-4" />
                   </button>
-                  <p className="text-xs text-[#6B6B6B]">* Required fields</p>
+                  <p className="text-xs text-[#6B6B6B]">{TEXT.contact.formRequired}</p>
                 </form>
               )}
             </div>

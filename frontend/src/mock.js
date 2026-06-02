@@ -43,6 +43,177 @@ export function buildEnquiryMailto({ subject = "Benchtop Enquiry", colour = "", 
   return `mailto:${SITE.email}?subject=${subj}&body=${body}`;
 }
 
+// ===================================================================
+// ✏️  ALL EDITABLE TEXT IS BELOW — change anything inside the quotes
+//     Every visible sentence/headline/paragraph on the website lives
+//     here. The website hot-reloads when you save this file.
+// ===================================================================
+export const TEXT = {
+
+  // -------------------------------------------------------------
+  // HOMEPAGE
+  // -------------------------------------------------------------
+  home: {
+    // The small label above the "Auckland's most trusted..." headline
+    whoWeAreLabel:      "Who We Are",
+    // The H2 introducing your company
+    whoWeAreHeadline:   "Auckland's most trusted stone fabricator since 2008.",
+    // The intro paragraph below — THIS IS YOUR COMPANY INTRO. Make it personal!
+    whoWeAreParagraph:  "Sunhome Group Ltd has proudly supplied premium stone benchtops to residential and commercial clients across Auckland for over 15 years. Combining the latest 5-axis CNC technology with master craftsmen, we deliver exceptional product and service — at honest, competitive pricing.",
+
+    // The 3 stats next to the intro paragraph
+    stats: [
+      { number: "15+",  label: "Years in trade" },
+      { number: "600+", label: "Homes per year" },
+      { number: "3",    label: "Day installs"   },
+    ],
+
+    // Services section
+    servicesLabel:      "What We Do",
+    servicesHeadline:   "Stone for every space.",
+
+    // Why Sunhome section
+    whyLabel:           "Why Sunhome",
+    whyHeadline:        "The detail is in the difference.",
+    whyParagraph:       "Fifteen years sharpening every joint, every edge, every conversation. The result — stone you'll be proud to live with.",
+
+    // Featured marbles section
+    featuredLabel:      "Featured Range",
+    featuredHeadline:   "Statement marbles, hand-picked.",
+    featuredCta:        "View all colours",
+
+    // Testimonials section
+    reviewsLabel:       "Client Stories",
+    reviewsHeadline:    "Trusted by hundreds of New Zealanders.",
+    reviewsMoreCta:     "Read all reviews on Google",
+
+    // Partner brand strip
+    brandsHeadline:     "We supply the most trusted engineered quartz brands on the NZ market.",
+    brandsLabel:        "Partner Brands",
+
+    // The big closing CTA at the bottom of the homepage
+    ctaLabel:           "Start Your Project",
+    ctaHeadline:        "Ready to transform your kitchen?",
+    ctaParagraph:       "Visit our East Tamaki showroom or get a free, no-obligation quote today.",
+    ctaPrimary:         "Email Sales for a Quote",
+    ctaSecondary:       "Contact Page",
+    ctaTertiary:        "View Our Work",
+  },
+
+  // -------------------------------------------------------------
+  // COLOUR SAMPLES PAGE
+  // -------------------------------------------------------------
+  colours: {
+    label:              "Project Quartz",
+    headline:           "Colour Samples",
+    intro:              "From timeless whites to dramatic veined marbles — explore our complete in-stock range. Visit the East Tamaki showroom to see samples in person.",
+
+    // The 4 small benefit cards on the right
+    benefits: [
+      { title: "Harder & Safer",     desc: "Engineered quartz — harder, stronger and safer than natural stone." },
+      { title: "Easy to Maintain",   desc: "Simple wipe-down with warm soapy water. No sealing needed." },
+      { title: "Wide Selection",     desc: "Hundreds of colours and finishes in stock and ready to fabricate." },
+      { title: "Honest Pricing",     desc: "Pay only for what you use — the most competitive prices in Auckland." },
+    ],
+
+    // Full slabs section (further down the page)
+    slabsLabel:         "In Stock",
+    slabsHeadline:      "Full slab preview",
+    slabsParagraph:     "See the full pattern, veining and movement of each stone before you decide.",
+
+    brandStrip:         "We also supply the full Caesarstone, Silestone, Uniquartz, Trendstone and Y&J Stone colour ranges.",
+
+    // Bottom CTA
+    ctaHeadline:        "Visit the showroom to feel the stone.",
+    ctaPrimary:         "Email Sales to Book",
+    ctaSecondary:       "See Contact Info",
+  },
+
+  // -------------------------------------------------------------
+  // GALLERY PAGE
+  // -------------------------------------------------------------
+  gallery: {
+    label:              "Our Work",
+    headline:           "A portfolio shaped by precision.",
+    intro:              "Waterfall ends, mitered joints, top-mount and under-mount sinks, and benchtops in thicknesses from 20mm to 60mm. Every project hand-finished in our Auckland workshop.",
+  },
+
+  // -------------------------------------------------------------
+  // SINKS & EDGES PAGE
+  // -------------------------------------------------------------
+  sinks: {
+    label:              "Stainless Steel Sinks · 2026 Pricing",
+    headline:           "Sinks, edges & every fine detail.",
+    intro:              "Handmade premium 1.2mm stainless steel sinks with 5-year warranty — single, one-and-a-half and double bowl options. All prices below exclude GST. Machined sink cut-outs handled in-house on our 5-axis CNC.",
+
+    pricingLabel:       "Sink Models & Pricing",
+    pricingHelper:      "Click 'Enquire' on any sink to open an email pre-filled with that model and your preferences.",
+    pricingBadge:       "5-Year Warranty · NZ Stock",
+
+    helpBoxEyebrow:     "Not sure which fits?",
+    helpBoxTitle:       "Tell us your cabinet width — we'll match the right sink.",
+    helpBoxButton:      "Email Sales for Sizing Help",
+
+    mountStylesTitle:   "Sink Cut-Out Styles",
+    edgesTitle:         "Edges & Joints",
+
+    thicknessLabel:     "Thickness Options",
+    thicknessHeadline:  "From subtle to architectural.",
+    thicknessParagraph: "We stock and fabricate every common thickness. Most kitchens use 20mm or 30mm — mitered joints make any thickness look monolithic.",
+
+    ctaLabel:           "Crafted On-Site",
+    ctaHeadline:        "Tell us about your sink, and we'll match it perfectly.",
+    ctaPrimary:         "Email Sales for a Quote",
+    ctaSecondary:       "Contact Page",
+  },
+
+  // -------------------------------------------------------------
+  // CONTACT PAGE
+  // -------------------------------------------------------------
+  contact: {
+    label:              "Get In Touch",
+    headline:           "Let's bring your project to life.",
+    intro:              "Visit our Ōtara showroom, give us a call, or send a message — we usually reply the same business day.",
+    primaryBtn:         "Email Sales@sunhome.co.nz",
+
+    // Form headings
+    formLabel:          "Request a Quote",
+    formHeadline:       "Send us a message",
+    formSuccessTitle:   "Thank you.",
+    formSuccessBody:    "Your enquiry has been received. We'll respond to you shortly. For urgent matters, please call",
+    formSuccessLink:    "Send another enquiry",
+    formSubmit:         "Send Request",
+    formRequired:       "* Required fields",
+    formError:          "Please fill in all required fields.",
+
+    // The 4 info cards on the left of the contact form
+    info: {
+      visitTitle:    "Visit the Showroom",
+      visitExtra:    "(Behind the wine shop, entrance off East Tamaki Road, left-hand driveway of the liquor shop.)",
+      callTitle:     "Call Us",
+      emailTitle:    "Email Us",
+      hoursTitle:    "Hours",
+      hoursShowroom: "Showroom",
+      hoursPickup:   "Pick Up",
+    },
+  },
+
+  // -------------------------------------------------------------
+  // FOOTER (shown at the bottom of every page)
+  // -------------------------------------------------------------
+  footer: {
+    blurb:              "Auckland's trusted stone fabricator — premium engineered quartz and natural stone, crafted with precision since 2008.",
+    establishedLabel:   "Est. 2008",
+    exploreTitle:       "Explore",
+    contactTitle:       "Get In Touch",
+    hoursTitle:         "Showroom Hours",
+    showroomLabel:      "Showroom",
+    pickupLabel:        "Pick Up",
+    bottomLine:         "Auckland · New Zealand",
+  },
+};
+
+
 export const HERO_SLIDES = [
   {
     image: "/assets/colors/cal-kitchen.jpg",

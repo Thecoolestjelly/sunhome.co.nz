@@ -6,7 +6,7 @@ import Reveal from "../components/Reveal";
 import RatingBanner from "../components/RatingBanner";
 import StarRating from "../components/StarRating";
 import EnquireButton from "../components/EnquireButton";
-import { SERVICES, FEATURES, TESTIMONIALS, BRANDS, COLOR_RANGES, SITE } from "../mock";
+import { SERVICES, FEATURES, TESTIMONIALS, BRANDS, COLOR_RANGES, SITE, TEXT } from "../mock";
 
 const FEATURE_ICONS = [Award, Clock, Cog, BadgeCheck, Users, Tag];
 
@@ -19,9 +19,9 @@ export default function Home() {
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-20">
           <Reveal className="lg:col-span-5">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Who We Are</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">{TEXT.home.whoWeAreLabel}</div>
             <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-6">
-              Auckland's most trusted stone fabricator since 2008.
+              {TEXT.home.whoWeAreHeadline}
             </h2>
             <div className="mt-8">
               <RatingBanner />
@@ -29,17 +29,13 @@ export default function Home() {
           </Reveal>
           <Reveal delay={150} className="lg:col-span-7">
             <p className="text-[#4A4A4A] text-lg leading-relaxed mb-10">
-              Sunhome Group Ltd has proudly supplied premium stone benchtops to residential and commercial clients across Auckland for over 15 years. Combining the latest 5-axis CNC technology with master craftsmen, we deliver exceptional product and service — at honest, competitive pricing.
+              {TEXT.home.whoWeAreParagraph}
             </p>
             <div className="grid grid-cols-3 gap-6 border-t border-[#E5E0D5] pt-10">
-              {[
-                { k: "15+", v: "Years in trade" },
-                { k: "600+", v: "Homes per year" },
-                { k: "3", v: "Day installs" },
-              ].map((s) => (
-                <div key={s.v}>
-                  <div className="font-serif text-4xl lg:text-5xl text-[#1A1A1A] mb-2">{s.k}</div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B]">{s.v}</div>
+              {TEXT.home.stats.map((s) => (
+                <div key={s.label}>
+                  <div className="font-serif text-4xl lg:text-5xl text-[#1A1A1A] mb-2">{s.number}</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-[#6B6B6B]">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -51,9 +47,9 @@ export default function Home() {
       <section className="py-24 lg:py-32 bg-[#F2EEE6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="mb-16 max-w-2xl">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">What We Do</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">{TEXT.home.servicesLabel}</div>
             <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1]">
-              Stone for every space.
+              {TEXT.home.servicesHeadline}
             </h2>
           </Reveal>
 
@@ -90,12 +86,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
             <Reveal className="lg:col-span-4 lg:sticky lg:top-32">
-              <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Why Sunhome</div>
+              <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">{TEXT.home.whyLabel}</div>
               <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-6">
-                The detail is in the difference.
+                {TEXT.home.whyHeadline}
               </h2>
               <p className="text-[#4A4A4A] leading-relaxed">
-                Fifteen years sharpening every joint, every edge, every conversation. The result — stone you'll be proud to live with.
+                {TEXT.home.whyParagraph}
               </p>
             </Reveal>
 
@@ -124,16 +120,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div className="max-w-2xl">
-              <div className="text-[#1A1A1A]/60 text-xs uppercase tracking-[0.35em] mb-5">Featured Range</div>
+              <div className="text-[#1A1A1A]/60 text-xs uppercase tracking-[0.35em] mb-5">{TEXT.home.featuredLabel}</div>
               <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1]">
-                Statement marbles, hand-picked.
+                {TEXT.home.featuredHeadline}
               </h2>
             </div>
             <Link
               to="/colours"
               className="inline-flex items-center gap-2 text-[#1A1A1A] text-xs uppercase tracking-[0.25em] border-b border-[#1A1A1A] pb-1 hover:text-[#B8956A] hover:border-[#B8956A] transition-colors group"
             >
-              View all colours
+              {TEXT.home.featuredCta}
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </Reveal>
@@ -165,9 +161,9 @@ export default function Home() {
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="text-center max-w-2xl mx-auto mb-10">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Client Stories</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">{TEXT.home.reviewsLabel}</div>
             <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-6">
-              Trusted by hundreds of New Zealanders.
+              {TEXT.home.reviewsHeadline}
             </h2>
             <div className="flex justify-center">
               <RatingBanner />
@@ -202,7 +198,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#B8956A] hover:text-[#1A1A1A] transition-colors"
             >
-              Read all reviews on Google
+              {TEXT.home.reviewsMoreCta}
               <ArrowRight className="w-4 h-4" />
             </a>
           </Reveal>
@@ -213,9 +209,9 @@ export default function Home() {
       <section className="py-20 bg-[#F2EEE6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal className="text-center mb-12">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-4">Partner Brands</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-4">{TEXT.home.brandsLabel}</div>
             <p className="font-serif text-[#1A1A1A] text-2xl lg:text-3xl">
-              We supply the most trusted engineered quartz brands on the NZ market.
+              {TEXT.home.brandsHeadline}
             </p>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 items-center">
@@ -236,28 +232,28 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[#1A1A1A]/80" />
         <Reveal className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <div className="text-[#B8956A] text-xs uppercase tracking-[0.4em] mb-6">Start Your Project</div>
+          <div className="text-[#B8956A] text-xs uppercase tracking-[0.4em] mb-6">{TEXT.home.ctaLabel}</div>
           <h2 className="font-serif text-white text-4xl lg:text-6xl leading-[1.05] mb-8">
-            Ready to transform your kitchen?
+            {TEXT.home.ctaHeadline}
           </h2>
           <p className="text-white/85 text-lg mb-10 leading-relaxed">
-            Visit our East Tamaki showroom or get a free, no-obligation quote today.
+            {TEXT.home.ctaParagraph}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <EnquireButton variant="light" subject="Quote Request from Home page">
-              Email Sales for a Quote
+              {TEXT.home.ctaPrimary}
             </EnquireButton>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 border border-white/40 text-white px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
             >
-              Contact Page
+              {TEXT.home.ctaSecondary}
             </Link>
             <Link
               to="/gallery"
               className="inline-flex items-center gap-2 border border-white/40 text-white px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
             >
-              View Our Work
+              {TEXT.home.ctaTertiary}
             </Link>
           </div>
         </Reveal>

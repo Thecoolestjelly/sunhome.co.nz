@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import Reveal from "../components/Reveal";
-import { GALLERY } from "../mock";
+import { GALLERY, TEXT } from "../mock";
 
 export default function Gallery() {
   const categories = useMemo(
@@ -47,12 +47,12 @@ export default function Gallery() {
       <section className="pt-40 pb-16 lg:pt-48 lg:pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal>
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-6">Our Work</div>
+            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-6">{TEXT.gallery.label}</div>
             <h1 className="font-serif text-[#1A1A1A] text-5xl lg:text-7xl leading-[1.02] mb-6 max-w-4xl">
-              A portfolio shaped by precision.
+              {TEXT.gallery.headline}
             </h1>
             <p className="text-[#4A4A4A] text-lg leading-relaxed max-w-2xl">
-              Waterfall ends, mitered joints, top-mount and under-mount sinks, and benchtops in thicknesses from 20mm to 60mm. Every project hand-finished in our Auckland workshop.
+              {TEXT.gallery.intro}
             </p>
           </Reveal>
         </div>

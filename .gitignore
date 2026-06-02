@@ -81,3 +81,9 @@ memory/test_credentials.md
 # Mobile development
 android-sdk/assets_user/photos.zip
 assets_user/photos.zip
+.env
+.env.*
+*.env
+credentials.json
+*.key
+.credentials

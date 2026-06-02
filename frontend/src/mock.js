@@ -73,8 +73,8 @@ export const TEXT = {
     servicesHeadline:   "Custom stone solutions for every project.",
 
     // Why Sunhome section
-    whyLabel:           "Why Choose Sunhome?",
-    whyHeadline:        "The detail is in the difference.",
+    whyLabel:           "Why Sunhome",
+    whyHeadline:        "Why choose Sunhome?",
     whyParagraph:       "Experience, quality workmanship and honest service have made us a trusted choice for many Auckland homeowners for over 15 years.",
 
     // Featured marbles section

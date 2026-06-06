@@ -402,6 +402,7 @@ export const COLOR_RANGES = [
       { name: "Calacatta Gold", image: "/assets/colors/calacatta-gold-onsale-square.jpg" },
       { name: "Platinum Black", image: "/assets/colors/platinum-black.jpg" },
       { name: "Dark Stone", image: "/assets/colors/dark-stone.jpg" },
+      { name: "Circular Table — from $300", image: "/assets/gallery/round-table-1.jpg" },
     ],
   },
 ];
@@ -447,10 +448,9 @@ export const GALLERY = [
   { src: "/assets/gallery/caesarstone-snow-miter.jpg", caption: "Caesarstone Snow 60mm Miter", category: "Joints" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/1-Calacatta-White-60mm-Miter-Joint-1-1024x768.jpg", caption: "Calacatta 60mm Mitered Joint", category: "Joints" },
 
-  // ============ SINKS (5) ============
+  // ============ SINKS (4) ============
   { src: "/assets/sinks/undermount-french-vanilla.jpg", caption: "French Vanilla Under-Mount Sink", category: "Sinks" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/28-Black-Pearl-Top-Mount-sink-1.jpg", caption: "Black Pearl Top-Mount Sink", category: "Sinks" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/33-White-Diamond-UM-sink-1-scaled.jpg", caption: "Diamond White Under-Mount Sink", category: "Sinks" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/27-Black-Pearl-Non-Rectangle-UM-sink-cut-out-scaled.jpg", caption: "Black Pearl Custom Cut-Out Sink", category: "Sinks" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/34-White-Nougat-Butt-joint-water-fall-end-1-scaled.jpg", caption: "White Nougat Sink Detail", category: "Sinks" },
 

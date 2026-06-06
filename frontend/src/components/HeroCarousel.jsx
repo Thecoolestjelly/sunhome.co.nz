@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight, Mail } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { HERO_SLIDES, buildEnquiryMailto } from "../mock";
+import { HERO_SLIDES } from "../mock";
+import EnquireButton from "./EnquireButton";
 
 export default function HeroCarousel() {
   const [i, setI] = useState(0);
@@ -57,13 +58,9 @@ export default function HeroCarousel() {
                 {s.subtitle}
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href={buildEnquiryMailto({ subject: "Free Estimate Request" })}
-                  className="inline-flex items-center gap-2 bg-[#FAF8F3] text-[#1A1A1A] px-7 py-4 rounded-full text-sm uppercase tracking-[0.18em] hover:bg-[#B8956A] hover:text-white transition-colors duration-300"
-                >
-                  <Mail className="w-4 h-4" />
+                <EnquireButton subject="Free Estimate Request" variant="light" className="!px-7 !py-4 !text-sm">
                   Get a Free Estimate
-                </a>
+                </EnquireButton>
                 <Link
                   to="/colours"
                   className="inline-flex items-center gap-2 border border-white/40 text-white px-7 py-4 rounded-full text-sm uppercase tracking-[0.18em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"

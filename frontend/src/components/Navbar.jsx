@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
-import { SITE, buildEnquiryMailto } from "../mock";
+import { SITE } from "../mock";
+import EnquireButton from "./EnquireButton";
 
 const LINKS = [
   { to: "/", label: "Home" },
@@ -79,13 +80,9 @@ export default function Navbar() {
             <Phone className="w-3.5 h-3.5" />
             {SITE.phone}
           </a>
-          <a
-            href={buildEnquiryMailto({ subject: "Website Enquiry" })}
-            className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.18em] bg-[#1A1A1A] text-[#FAF8F3] rounded-full px-4 py-2 hover:bg-[#B8956A] transition-colors duration-300"
-          >
-            <Mail className="w-3.5 h-3.5" />
+          <EnquireButton subject="Website Enquiry" variant="primary" className="!px-4 !py-2 !text-[12px]">
             Enquire
-          </a>
+          </EnquireButton>
         </div>
 
         <button
@@ -127,7 +124,7 @@ export default function Navbar() {
               {SITE.phone}
             </a>
             <a
-              href={buildEnquiryMailto({ subject: "Website Enquiry" })}
+              href={`mailto:${SITE.email}`}
               className="flex items-center gap-2 text-sm text-[#1A1A1A]"
             >
               <Mail className="w-4 h-4" />

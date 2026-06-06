@@ -169,7 +169,12 @@ export default function Sinks() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#E5E0D5] border border-[#E5E0D5]">
             {THICKNESSES.map((t, idx) => (
               <Reveal key={t.mm} delay={idx * 60}>
-                <div className="bg-[#FAF8F3] p-8 lg:p-10 h-full hover:bg-white transition-colors duration-500">
+                <div className="relative bg-[#FAF8F3] p-8 lg:p-10 h-full hover:bg-white transition-colors duration-500">
+                  {t.popular && (
+                    <span className="absolute top-4 right-4 bg-[#B8956A] text-white text-[9px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full">
+                      Popular
+                    </span>
+                  )}
                   <div className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl mb-2">{t.mm}</div>
                   <div className="text-[#B8956A] text-[10px] uppercase tracking-[0.3em] mb-4">{t.label}</div>
                   <p className="text-[#6B6B6B] text-sm leading-relaxed">{t.note}</p>

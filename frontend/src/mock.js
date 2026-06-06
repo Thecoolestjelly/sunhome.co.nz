@@ -421,13 +421,9 @@ export const FULL_SLABS = [
   { name: "White Standard Range", note: "20mm / 30mm Available", image: "/assets/colors/white-standard.jpg" },
 ];
 
-// Off-cut / Clearance — round tables and other off-cuts
-export const OFFCUTS = [
-  { name: "Round Table — Calacatta",     priceFrom: "$300",  note: "Cut & polished off-cut",  image: "/assets/gallery/round-table-1.jpg" },
-  { name: "Round Table — White Marble",  priceFrom: "$320",  note: "Cut & polished off-cut",  image: "/assets/gallery/round-table-2.jpg" },
-  { name: "Round Table — Statement",     priceFrom: "$350",  note: "Cut & polished off-cut",  image: "/assets/gallery/round-table-3.jpg" },
-  { name: "Round Table — Premium",       priceFrom: "$380",  note: "Cut & polished off-cut",  image: "/assets/gallery/round-table-4.jpg" },
-];
+// Off-cut / Clearance section was removed per request — keeping the array
+// commented placeholder in case it's wanted back later.
+export const OFFCUTS = [];
 
 export const GALLERY = [
   // ============ KITCHENS (8) ============

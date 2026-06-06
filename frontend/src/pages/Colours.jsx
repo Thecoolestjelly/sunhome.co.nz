@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ShieldCheck, Sparkles, Layers, Wallet, Mail } from "lucide-react";
 import Reveal from "../components/Reveal";
 import EnquireButton from "../components/EnquireButton";
-import { buildEnquiryMailto, COLOR_RANGES, FULL_SLABS, BRANDS, OFFCUTS, TEXT } from "../mock";
+import { buildEnquiryMailto, COLOR_RANGES, FULL_SLABS, BRANDS, TEXT } from "../mock";
 
 const FEATURES = TEXT.colours.benefits.map((b, i) => ({
   ...b,
@@ -158,56 +158,6 @@ export default function Colours() {
               <div key={b.name} className="flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
                 <img src={b.logo} alt={b.name} className="max-h-10 w-auto object-contain" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Off-Cuts / Round Tables */}
-      <section className="py-24 lg:py-28 bg-[#FAF8F3] border-t border-[#E5E0D5]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <Reveal className="text-center max-w-2xl mx-auto mb-14">
-            <div className="text-[#B8956A] text-xs uppercase tracking-[0.35em] mb-5">Off-Cuts · Clearance</div>
-            <h2 className="font-serif text-[#1A1A1A] text-4xl lg:text-5xl leading-[1.1] mb-5">
-              Round tables from $300
-            </h2>
-            <p className="text-[#4A4A4A] leading-relaxed">
-              Cut and polished off-cuts of our premium slabs — perfect for hall, coffee and dining tables. Limited stock, available to pick up from our Ōtara showroom.
-            </p>
-          </Reveal>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-7">
-            {OFFCUTS.map((o, idx) => (
-              <Reveal key={o.name} delay={idx * 70}>
-                <div className="group bg-white border border-[#E5E0D5] overflow-hidden h-full flex flex-col hover:border-[#B8956A] transition-colors duration-500">
-                  <div className="aspect-square overflow-hidden">
-                    <img
-                      src={o.image}
-                      alt={o.name}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-5 flex flex-col flex-1">
-                    <h3 className="font-serif text-[#1A1A1A] text-lg mb-1 leading-tight">{o.name}</h3>
-                    <div className="text-[10px] uppercase tracking-[0.22em] text-[#6B6B6B] mb-3">{o.note}</div>
-                    <div className="flex items-end justify-between mt-auto">
-                      <div>
-                        <div className="text-[10px] uppercase tracking-[0.22em] text-[#B8956A]">From</div>
-                        <div className="font-serif text-[#1A1A1A] text-2xl leading-none">{o.priceFrom}</div>
-                      </div>
-                      <EnquireButton
-                        subject={`Off-Cut Enquiry — ${o.name}`}
-                        notes={`Interested in the ${o.name} starting from ${o.priceFrom}.`}
-                        variant="outline"
-                        className="!px-4 !py-2 !text-[10px]"
-                      >
-                        Enquire
-                      </EnquireButton>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
             ))}
           </div>
         </div>

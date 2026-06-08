@@ -403,7 +403,6 @@ export const COLOR_RANGES = [
       { name: "Platinum Black", image: "/assets/colors/platinum-black.jpg" },
       { name: "Circular Table — from $300", image: "/assets/gallery/kitchen-4.jpg" },
       { name: "Circular Table — from $300", image: "/assets/gallery/kitchen-5.jpg" },
-      { name: "Circular Table — from $300", image: "/assets/gallery/round-table-1.jpg" },
     ],
   },
 ];

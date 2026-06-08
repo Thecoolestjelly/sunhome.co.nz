@@ -11,7 +11,7 @@ export const SITE = {
   address: "1C Birmingham Road, Ōtara, Auckland 2013, New Zealand",
   shortAddress: "1C Birmingham Road, Ōtara, Auckland",
   hours: {
-    showroom: "Mon – Fri  10:00am – 11:00am (appointments available on request)",
+    showroom: "Mon – Fri  10:00am – 12:00pm (appointments available on request)",
     pickup: "Mon – Fri  10:00am – 1:00pm",
   },
   logo: "/assets/logo/sunhome-logo.png",
@@ -401,7 +401,8 @@ export const COLOR_RANGES = [
     colors: [
       { name: "Calacatta Gold", image: "/assets/colors/calacatta-gold-onsale-square.jpg" },
       { name: "Platinum Black", image: "/assets/colors/platinum-black.jpg" },
-      { name: "Dark Stone", image: "/assets/colors/dark-stone.jpg" },
+      { name: "Circular Table — from $300", image: "/assets/gallery/kitchen-4.jpg" },
+      { name: "Circular Table — from $300", image: "/assets/gallery/kitchen-5.jpg" },
       { name: "Circular Table — from $300", image: "/assets/gallery/round-table-1.jpg" },
     ],
   },
@@ -426,14 +427,12 @@ export const FULL_SLABS = [
 export const OFFCUTS = [];
 
 export const GALLERY = [
-  // ============ KITCHENS (8) ============
+  // ============ KITCHENS (6) ============
   { src: "/assets/gallery/kitchen-cal-white-1.jpg", caption: "Calacatta White Kitchen", category: "Kitchens" },
   { src: "/assets/gallery/kitchen-modern.jpg",      caption: "Modern Kitchen Install", category: "Kitchens" },
   { src: "/assets/gallery/kitchen-1.jpg",           caption: "Premium Bench Install", category: "Kitchens" },
   { src: "/assets/gallery/kitchen-2.jpg",           caption: "Kitchen Renovation",    category: "Kitchens" },
   { src: "/assets/gallery/kitchen-3.jpg",           caption: "Island Bench Install",  category: "Kitchens" },
-  { src: "/assets/gallery/kitchen-4.jpg",           caption: "Bespoke Family Kitchen", category: "Kitchens" },
-  { src: "/assets/gallery/kitchen-5.jpg",           caption: "Designer Kitchen",      category: "Kitchens" },
   { src: "/assets/gallery/kitchen-classic.jpg",     caption: "Classic Kitchen",       category: "Kitchens" },
 
   // ============ JOINTS (6) ============
@@ -472,11 +471,10 @@ export const GALLERY = [
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/tan-brown-scaled.jpg",   caption: "Tan Brown Granite",    category: "Granite" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/front1-1-scaled.jpg",    caption: "Steel Grey Granite",   category: "Granite" },
 
-  // ============ COMMERCIAL (4) ============
+  // ============ COMMERCIAL (3) ============
   { src: "/assets/gallery/commercial-shop.jpg",        caption: "Newmarket Shop Install",     category: "Commercial" },
   { src: "/assets/gallery/commercial-restaurant.jpg",  caption: "Restaurant Install",         category: "Commercial" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/14-Calacatta-White-Bar-Back-2-1024x768.jpg", caption: "Calacatta Bar Back", category: "Commercial" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Brittanicca-3-1024x768.jpg", caption: "Brittanicca Commercial Island", category: "Commercial" },
 
   // ============ FACTORY (5) ============
   { src: "/assets/colors/showroom-1.jpg", caption: "Factory Showroom Floor", category: "Factory" },

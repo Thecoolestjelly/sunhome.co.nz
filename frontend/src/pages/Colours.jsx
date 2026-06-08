@@ -74,7 +74,7 @@ export default function Colours() {
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
                 {range.colors.map((c, idx) => (
-                  <Reveal key={c.name} delay={idx * 60}>
+                  <Reveal key={`${c.name}-${idx}`} delay={idx * 60}>
                     <div className="group cursor-pointer">
                       <div className="overflow-hidden aspect-square bg-[#F2EEE6] mb-4 relative">
                         <img

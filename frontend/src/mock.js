@@ -426,10 +426,9 @@ export const FULL_SLABS = [
 export const OFFCUTS = [];
 
 export const GALLERY = [
-  // ============ KITCHENS (6) ============
+  // ============ KITCHENS (5) ============
   { src: "/assets/gallery/kitchen-cal-white-1.jpg", caption: "Calacatta White Kitchen", category: "Kitchens" },
   { src: "/assets/gallery/kitchen-modern.jpg",      caption: "Modern Kitchen Install", category: "Kitchens" },
-  { src: "/assets/gallery/kitchen-1.jpg",           caption: "Premium Bench Install", category: "Kitchens" },
   { src: "/assets/gallery/kitchen-2.jpg",           caption: "Kitchen Renovation",    category: "Kitchens" },
   { src: "/assets/gallery/kitchen-3.jpg",           caption: "Island Bench Install",  category: "Kitchens" },
   { src: "/assets/gallery/kitchen-classic.jpg",     caption: "Classic Kitchen",       category: "Kitchens" },
@@ -475,11 +474,12 @@ export const GALLERY = [
   { src: "/assets/gallery/commercial-restaurant.jpg",  caption: "Restaurant Install",         category: "Commercial" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/14-Calacatta-White-Bar-Back-2-1024x768.jpg", caption: "Calacatta Bar Back", category: "Commercial" },
 
-  // ============ FACTORY (5) ============
+  // ============ FACTORY (6) ============
   { src: "/assets/colors/showroom-1.jpg", caption: "Factory Showroom Floor", category: "Factory" },
   { src: "/assets/colors/showroom-2.jpg", caption: "Slab Storage", category: "Factory" },
   { src: "/assets/colors/showroom-3.jpg", caption: "Workshop View", category: "Factory" },
   { src: "/assets/colors/showroom-4.jpg", caption: "Inside the Workshop", category: "Factory" },
+  { src: "/assets/gallery/kitchen-1.jpg", caption: "Factory Full Slab Preview", category: "Factory" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/5-Axis-CNC-Machine-scaled.jpg", caption: "5-Axis CNC Machine", category: "Factory" },
 ];
 

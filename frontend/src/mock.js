@@ -474,9 +474,8 @@ export const GALLERY = [
   { src: "/assets/gallery/commercial-restaurant.jpg",  caption: "Restaurant Install",         category: "Commercial" },
   { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/14-Calacatta-White-Bar-Back-2-1024x768.jpg", caption: "Calacatta Bar Back", category: "Commercial" },
 
-  // ============ FACTORY (6) ============
+  // ============ FACTORY (5) ============
   { src: "/assets/colors/showroom-1.jpg", caption: "Factory Showroom Floor", category: "Factory" },
-  { src: "/assets/colors/showroom-2.jpg", caption: "Slab Storage", category: "Factory" },
   { src: "/assets/colors/showroom-3.jpg", caption: "Workshop View", category: "Factory" },
   { src: "/assets/colors/showroom-4.jpg", caption: "Inside the Workshop", category: "Factory" },
   { src: "/assets/gallery/kitchen-1.jpg", caption: "Factory Full Slab Preview", category: "Factory" },

@@ -241,7 +241,7 @@ export const SERVICES = [
     num: "01",
     title: "Commercial Benchtops",
     desc: "Apartments, care homes, hospitality. We have delivered for 19 Rawene Road Birkenhead, Edgewater Care Home (Metlife Care) and many more.",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/14-Calacatta-White-Bar-Back-2-1024x768.jpg",
+    image: "/assets/sunhome/cal-bar-back.jpg",
   },
   {
     num: "02",
@@ -253,7 +253,7 @@ export const SERVICES = [
     num: "03",
     title: "Laundry & Vanity Tops",
     desc: "Plenty of premium off-cuts available at very competitive pricing — perfect for laundries and bathroom vanities.",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/15-Pure-White-Customised-vanity-top-1.jpg",
+    image: "/assets/sunhome/pure-white-vanity.jpg",
   },
   {
     num: "04",
@@ -340,11 +340,11 @@ export const TESTIMONIALS = [
 ];
 
 export const BRANDS = [
-  { name: "Caesarstone", logo: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Caesarstone.png" },
-  { name: "Silestone", logo: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Silestone.png" },
-  { name: "Uniquartz", logo: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Uniquartz.png" },
-  { name: "Trendstone", logo: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/trendstone.png" },
-  { name: "Y&J Stone", logo: "https://www.sunhome.co.nz/wp-content/uploads/2024/04/FireShot-Capture-045-Home-Y-J-Stone%C2%AE-NZ-Ltd-yjstone.co_.nz_.png" },
+  { name: "Caesarstone", logo: "/assets/brands/caesarstone.png" },
+  { name: "Silestone", logo: "/assets/brands/silestone.png" },
+  { name: "Uniquartz", logo: "/assets/brands/uniquartz.png" },
+  { name: "Trendstone", logo: "/assets/brands/trendstone.png" },
+  { name: "Y&J Stone", logo: "/assets/brands/yj-stone.png" },
 ];
 
 // Updated colour ranges — using clearer photos from the user's 2026 collection
@@ -353,18 +353,18 @@ export const COLOR_RANGES = [
     name: "Standard Range",
     blurb: "Timeless whites — perfect for clean, modern interiors.",
     colors: [
-      { name: "White Ice", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/White-Ice-20mm-Available-rotated.jpg" },
-      { name: "White Nougat", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/White-Nougat-20mm-Available-rotated.jpg" },
-      { name: "White Diamond", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/White-Diamond-20mm-Available-rotated.jpg" },
+      { name: "White Ice", image: "/assets/sunhome/white-ice-swatch.jpg" },
+      { name: "White Nougat", image: "/assets/sunhome/white-nougat-swatch.jpg" },
+      { name: "White Diamond", image: "/assets/sunhome/white-diamond-swatch.jpg" },
     ],
   },
   {
     name: "Middle Range",
     blurb: "Subtle greys and warm stones with character.",
     colors: [
-      { name: "Diamond Grey", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Diamond-Grey-rotated.jpg" },
-      { name: "Grey Stone", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Grey-Stone-20mm-Available-rotated.jpg" },
-      { name: "Diamond Black", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Diamond-Black-rotated.jpg" },
+      { name: "Diamond Grey", image: "/assets/sunhome/diamond-grey-swatch.jpg" },
+      { name: "Grey Stone", image: "/assets/sunhome/grey-stone-swatch.jpg" },
+      { name: "Diamond Black", image: "/assets/sunhome/diamond-black-swatch.jpg" },
     ],
   },
   {
@@ -387,12 +387,12 @@ export const COLOR_RANGES = [
     name: "Natural Granite",
     blurb: "Authentic natural stone — hard-wearing and unique to every slab.",
     colors: [
-      { name: "Star Galaxy", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Star-galaxy-scaled.jpg" },
-      { name: "Black Pearl", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/11-andy-home-1-scaled.jpg" },
-      { name: "Blue Pearl", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Blue-Pearl-scaled.jpg" },
-      { name: "Jet Black", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Jet-black-um-1.jpg" },
-      { name: "Tan Brown", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/tan-brown-scaled.jpg" },
-      { name: "Steel Grey", image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/front1-1-scaled.jpg" },
+      { name: "Star Galaxy", image: "/assets/sunhome/star-galaxy.jpg" },
+      { name: "Black Pearl", image: "/assets/sunhome/black-pearl-kitchen.jpg" },
+      { name: "Blue Pearl", image: "/assets/sunhome/blue-pearl.jpg" },
+      { name: "Jet Black", image: "/assets/sunhome/jet-black.jpg" },
+      { name: "Tan Brown", image: "/assets/sunhome/tan-brown.jpg" },
+      { name: "Steel Grey", image: "/assets/sunhome/steel-grey.jpg" },
     ],
   },
   {
@@ -439,22 +439,22 @@ export const GALLERY = [
   { src: "/assets/gallery/diamond-white-miter.jpg",  caption: "Diamond White Mitered Joint", category: "Joints" },
   { src: "/assets/gallery/black-pearl-miter.jpg",    caption: "Black Pearl Mitered Joint", category: "Joints" },
   { src: "/assets/gallery/caesarstone-snow-miter.jpg", caption: "Caesarstone Snow 60mm Miter", category: "Joints" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/1-Calacatta-White-60mm-Miter-Joint-1-1024x768.jpg", caption: "Calacatta 60mm Mitered Joint", category: "Joints" },
+  { src: "/assets/sunhome/cal-60mm-miter.jpg", caption: "Calacatta 60mm Mitered Joint", category: "Joints" },
 
   // ============ SINKS (4) ============
   { src: "/assets/sinks/undermount-french-vanilla.jpg", caption: "French Vanilla Under-Mount Sink", category: "Sinks" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/28-Black-Pearl-Top-Mount-sink-1.jpg", caption: "Black Pearl Top-Mount Sink", category: "Sinks" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/27-Black-Pearl-Non-Rectangle-UM-sink-cut-out-scaled.jpg", caption: "Black Pearl Custom Cut-Out Sink", category: "Sinks" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/34-White-Nougat-Butt-joint-water-fall-end-1-scaled.jpg", caption: "White Nougat Sink Detail", category: "Sinks" },
+  { src: "/assets/sunhome/sink-topmount.jpg", caption: "Black Pearl Top-Mount Sink", category: "Sinks" },
+  { src: "/assets/sunhome/sink-um-blackpearl.jpg", caption: "Black Pearl Custom Cut-Out Sink", category: "Sinks" },
+  { src: "/assets/sunhome/white-nougat-detail.jpg", caption: "White Nougat Sink Detail", category: "Sinks" },
 
   // ============ VANITY & DETAIL (5) ============
   { src: "/assets/gallery/laundry-1.jpg",            caption: "Laundry Top",          category: "Vanity" },
   { src: "/assets/gallery/laundry-ice.jpg",          caption: "White Ice Laundry Top", category: "Vanity" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/15-Pure-White-Customised-vanity-top-1.jpg", caption: "Pure White Vanity Top", category: "Vanity" },
+  { src: "/assets/sunhome/pure-white-vanity.jpg", caption: "Pure White Vanity Top", category: "Vanity" },
   { src: "/assets/gallery/white-ice-20mm.jpg",       caption: "White Ice 20mm Detail", category: "Detail" },
   { src: "/assets/gallery/diamond-white-1.jpg",      caption: "Diamond White Detail",  category: "Detail" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/13-Pure-White-and-Calacatta-White-2-755x1024.jpg", caption: "Pure White & Calacatta Detail", category: "Detail" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/12-Calacatta-White-30mm-1.jpg", caption: "Calacatta White 30mm Detail", category: "Detail" },
+  { src: "/assets/sunhome/pure-white-cal-detail.jpg", caption: "Pure White & Calacatta Detail", category: "Detail" },
+  { src: "/assets/sunhome/cal-30mm-detail.jpg", caption: "Calacatta White 30mm Detail", category: "Detail" },
 
   // ============ CAESARSTONE (5) ============
   { src: "/assets/gallery/caesarstone-nuvo-1.jpg",     caption: "Caesarstone Calacatta Nuvo", category: "Caesarstone" },
@@ -464,22 +464,22 @@ export const GALLERY = [
   { src: "/assets/gallery/caesarstone-raw-concrete.jpg", caption: "Caesarstone Raw Concrete", category: "Caesarstone" },
 
   // ============ GRANITE (4) ============
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Star-galaxy-scaled.jpg", caption: "Star Galaxy Granite", category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Blue-Pearl-scaled.jpg",  caption: "Blue Pearl Granite",   category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/tan-brown-scaled.jpg",   caption: "Tan Brown Granite",    category: "Granite" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/front1-1-scaled.jpg",    caption: "Steel Grey Granite",   category: "Granite" },
+  { src: "/assets/sunhome/star-galaxy.jpg", caption: "Star Galaxy Granite", category: "Granite" },
+  { src: "/assets/sunhome/blue-pearl.jpg",  caption: "Blue Pearl Granite",   category: "Granite" },
+  { src: "/assets/sunhome/tan-brown.jpg",   caption: "Tan Brown Granite",    category: "Granite" },
+  { src: "/assets/sunhome/steel-grey.jpg",    caption: "Steel Grey Granite",   category: "Granite" },
 
   // ============ COMMERCIAL (3) ============
   { src: "/assets/gallery/commercial-shop.jpg",        caption: "Newmarket Shop Install",     category: "Commercial" },
   { src: "/assets/gallery/commercial-restaurant.jpg",  caption: "Restaurant Install",         category: "Commercial" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/14-Calacatta-White-Bar-Back-2-1024x768.jpg", caption: "Calacatta Bar Back", category: "Commercial" },
+  { src: "/assets/sunhome/cal-bar-back.jpg", caption: "Calacatta Bar Back", category: "Commercial" },
 
   // ============ FACTORY (5) ============
   { src: "/assets/colors/showroom-1.jpg", caption: "Factory Showroom Floor", category: "Factory" },
   { src: "/assets/colors/showroom-3.jpg", caption: "Workshop View", category: "Factory" },
   { src: "/assets/colors/showroom-4.jpg", caption: "Inside the Workshop", category: "Factory" },
   { src: "/assets/gallery/kitchen-1.jpg", caption: "Factory Full Slab Preview", category: "Factory" },
-  { src: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/5-Axis-CNC-Machine-scaled.jpg", caption: "5-Axis CNC Machine", category: "Factory" },
+  { src: "/assets/sunhome/cnc-machine.jpg", caption: "5-Axis CNC Machine", category: "Factory" },
 ];
 
 // SINKS — Updated 2026 pricing (S400R80 and D350-350R80 removed)
@@ -497,7 +497,7 @@ export const SINKS = [
     material: "1.2mm Stainless Steel",
     install: "Under Mount & Top Mount",
     warranty: "5 years",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/S340.jpg",
+    image: "/assets/sunhome/sink-s340.jpg",
   },
   {
     model: "S400",
@@ -512,7 +512,7 @@ export const SINKS = [
     material: "1.2mm Stainless Steel",
     install: "Under Mount & Top Mount",
     warranty: "5 years",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/S400.jpg",
+    image: "/assets/sunhome/sink-s400.jpg",
   },
   {
     model: "S450",
@@ -527,7 +527,7 @@ export const SINKS = [
     material: "1.2mm Stainless Steel",
     install: "Under Mount & Top Mount",
     warranty: "5 years",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/S400.jpg",
+    image: "/assets/sunhome/sink-s400.jpg",
     isNew: true,
   },
   {
@@ -543,7 +543,7 @@ export const SINKS = [
     material: "1.2mm Stainless Steel",
     install: "Under Mount & Top Mount",
     warranty: "5 years",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/S500.jpg",
+    image: "/assets/sunhome/sink-s500.jpg",
   },
   {
     model: "S600",
@@ -558,7 +558,7 @@ export const SINKS = [
     material: "1.2mm Stainless Steel",
     install: "Under Mount & Top Mount",
     warranty: "5 years",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/S500.jpg",
+    image: "/assets/sunhome/sink-s500.jpg",
     isNew: true,
   },
   {
@@ -575,7 +575,7 @@ export const SINKS = [
     install: "Under Mount & Top Mount",
     warranty: "5 years",
     note: "Big bowl can be Right / Left hand side",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/D400-200.jpg",
+    image: "/assets/sunhome/sink-d400-200.jpg",
   },
   {
     model: "D340+340",
@@ -590,7 +590,7 @@ export const SINKS = [
     material: "1.2mm Stainless Steel",
     install: "Under Mount & Top Mount",
     warranty: "5 years",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/D350-350.jpg",
+    image: "/assets/sunhome/sink-d350-350.jpg",
   },
 ];
 
@@ -604,7 +604,7 @@ export const SINK_TYPES = [
   {
     title: "Top-Mount Sink",
     desc: "Sits on top of the benchtop with a visible rim. Practical, budget-friendly and works with any thickness.",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/28-Black-Pearl-Top-Mount-sink-1.jpg",
+    image: "/assets/sunhome/sink-topmount.jpg",
     pros: ["Simple installation", "Budget friendly", "Suits all stone thicknesses"],
   },
 ];

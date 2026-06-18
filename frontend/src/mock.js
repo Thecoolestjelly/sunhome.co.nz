@@ -344,7 +344,6 @@ export const BRANDS = [
   { name: "Silestone", logo: "/assets/brands/silestone.png" },
   { name: "Uniquartz", logo: "/assets/brands/uniquartz.png" },
   { name: "Trendstone", logo: "/assets/brands/trendstone.png" },
-  { name: "Y&J Stone", logo: "/assets/brands/yj-stone.png" },
 ];
 
 // Updated colour ranges — using clearer photos from the user's 2026 collection

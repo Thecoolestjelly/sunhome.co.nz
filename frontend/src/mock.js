@@ -391,7 +391,6 @@ export const COLOR_RANGES = [
       { name: "Blue Pearl", image: "/assets/sunhome/blue-pearl.jpg" },
       { name: "Jet Black", image: "/assets/sunhome/jet-black.jpg" },
       { name: "Tan Brown", image: "/assets/sunhome/tan-brown.jpg" },
-      { name: "Steel Grey", image: "/assets/sunhome/steel-grey.jpg" },
     ],
   },
   {
@@ -462,11 +461,10 @@ export const GALLERY = [
   { src: "/assets/gallery/caesarstone-snow-miter.jpg", caption: "Caesarstone Snow Mitered",  category: "Caesarstone" },
   { src: "/assets/gallery/caesarstone-raw-concrete.jpg", caption: "Caesarstone Raw Concrete", category: "Caesarstone" },
 
-  // ============ GRANITE (4) ============
+  // ============ GRANITE (3) ============
   { src: "/assets/sunhome/star-galaxy.jpg", caption: "Star Galaxy Granite", category: "Granite" },
   { src: "/assets/sunhome/blue-pearl.jpg",  caption: "Blue Pearl Granite",   category: "Granite" },
   { src: "/assets/sunhome/tan-brown.jpg",   caption: "Tan Brown Granite",    category: "Granite" },
-  { src: "/assets/sunhome/steel-grey.jpg",    caption: "Steel Grey Granite",   category: "Granite" },
 
   // ============ COMMERCIAL (3) ============
   { src: "/assets/gallery/commercial-shop.jpg",        caption: "Newmarket Shop Install",     category: "Commercial" },

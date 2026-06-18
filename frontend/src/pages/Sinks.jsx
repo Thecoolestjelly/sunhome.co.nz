@@ -9,17 +9,17 @@ const EDGES = [
   {
     title: "Butt Joint",
     desc: "Classic flat joint where two stone pieces meet. Strong, clean and budget-friendly.",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/34-White-Nougat-Butt-joint-water-fall-end-1-scaled.jpg",
+    image: "/assets/sunhome/edge-butt-joint.jpg",
   },
   {
     title: "Mitered Joint",
     desc: "Two angled cuts joined at 45° — creating a seamless thick edge with hidden joinery.",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/1-Calacatta-White-60mm-Miter-Joint-1-scaled.jpg",
+    image: "/assets/sunhome/edge-mitered-joint.jpg",
   },
   {
     title: "Waterfall End",
     desc: "Stone flows from benchtop down to the floor — a striking architectural detail.",
-    image: "https://www.sunhome.co.nz/wp-content/uploads/2023/01/Brittanicca-2-1-scaled.jpg",
+    image: "/assets/sunhome/edge-waterfall-end.jpg",
   },
 ];
 
